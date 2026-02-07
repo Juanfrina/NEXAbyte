@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/NEXAbyte">
+    <Resource
+        auth="Container"
+        driverClassName="com.mysql.cj.jdbc.Driver"
+        maxActive="100"
+        maxIdle="30"
+        maxWait="10000"
+        name="jdbc/Usuario"
+        password="NEXAbyte123"
+        type="javax.sql.DataSource"
+        url="jdbc:mysql://localhost:3306/nexabyte"
+        username="nexabyte_user"/>
+</Context>
