@@ -9,22 +9,99 @@
 
     <name>NEXAbyte</name>
 
+     <!--
+    ============================================================================
+    PROPIEDADES - Variables reutilizables
+    ============================================================================
+    Puedes definir variables aquí y usarlas con ${nombreVariable}
+    -->
     <properties>
+        <!-- Directorio para APIs endorsed (APIs especiales de Java EE) -->
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+        
+        <!-- Codificación del código fuente (UTF-8 para acentos y ñ) -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     
+    <!--
+    ============================================================================
+    DEPENDENCIAS - Las librerías que necesita tu proyecto
+    ============================================================================
+    Maven descarga automáticamente estas librerías de Internet.
+    Las busca en Maven Central: https://search.maven.org/
+    
+    Cada dependencia tiene:
+    - groupId + artifactId + version: para identificar la librería exacta
+    - scope (opcional): cuándo se usa la dependencia
+        * compile (por defecto): siempre disponible
+        * provided: disponible al compilar, pero NO se incluye en el WAR
+                   (porque el servidor ya la tiene, ej: Tomcat tiene Servlet API)
+        * runtime: solo necesaria al ejecutar, no al compilar
+        * test: solo para ejecutar tests
+    -->
     <dependencies>
+        <!--
+        JAVA EE WEB API
+        Incluye las APIs de Servlets, JSP, etc.
+        scope="provided" porque Tomcat ya incluye estas clases
+        (no queremos duplicarlas en el WAR)
+        -->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.4</version>
+            <type>jar</type>
+        </dependency>
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
+        
+        <!--
+        JSTL - JSP Standard Tag Library
+        Las etiquetas <c:forEach>, <c:if>, <c:out>, etc.
+        SÍ se incluye en el WAR porque Tomcat no la trae por defecto
+        -->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        
+        <!--
+        MYSQL CONNECTOR/J
+        Driver JDBC para conectarse a MySQL
+        Permite que Java "hable" con la base de datos MySQL
+        -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
     </dependencies>
 
+    <!--
+    ============================================================================
+    BUILD - Configuración de la construcción del proyecto
+    ============================================================================
+    Aquí definimos los plugins que Maven usa para compilar y empaquetar.
+    -->
     <build>
         <plugins>
+            <!--
+            MAVEN COMPILER PLUGIN
+            Compila el código Java (.java -> .class)
+            
+            source y target definen la versión de Java:
+            - source: versión del código fuente que escribimos
+            - target: versión de la JVM donde se ejecutará
+            
+            NOTA: 1.7 es antiguo. Para proyectos nuevos, usa 11 o 17:
+            <source>17</source>
+            <target>17</target>
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -37,6 +114,14 @@
                     </compilerArguments>
                 </configuration>
             </plugin>
+            
+            <!--
+            MAVEN WAR PLUGIN
+            Empaqueta la aplicación web en un archivo WAR
+            
+            failOnMissingWebXml: si es true, falla si no hay web.xml
+            Como usamos anotaciones (@WebServlet), no necesitamos web.xml
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -45,6 +130,14 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
+            
+            <!--
+            MAVEN DEPENDENCY PLUGIN
+            Gestiona dependencias adicionales
+            Aquí copia las APIs endorsed de Java EE al directorio endorsed
+            (Esto es para compatibilidad con Java EE 7, en versiones más
+            nuevas ya no es necesario)
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>

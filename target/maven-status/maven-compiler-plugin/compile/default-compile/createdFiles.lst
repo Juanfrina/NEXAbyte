@@ -13,6 +13,7 @@ es\nexabyte\beans\Producto.class
 es\nexabyte\controllers\FrontController.class
 es\nexabyte\beans\Pedido$Estado.class
 es\nexabyte\DAO\ProductoDAO.class
+es\nexabyte\models\Utils.class
 es\nexabyte\listener\SessionListener.class
 es\nexabyte\controllers\GestionPedido.class
 es\nexabyte\DAO\IUsuarioDAO.class
@@ -25,4 +26,3 @@ es\nexabyte\DAOFactory\DAOFactory.class
 es\nexabyte\DAO\PedidoDAO.class
 es\nexabyte\controllers\VolverController.class
 es\nexabyte\beans\Pedido.class
-es\nexabyte\models\Utilitis.class

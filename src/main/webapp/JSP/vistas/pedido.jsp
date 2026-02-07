@@ -1,0 +1,17 @@
+<%-- 
+    Document   : pedido
+    Created on : 7 feb. 2026, 12:55:16
+    Author     : jfco1
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+    </body>
+</html>
