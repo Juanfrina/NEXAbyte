@@ -166,7 +166,7 @@ El proyecto sigue una arquitectura **MVC (Modelo-Vista-Controlador)** limpia con
 |-------------|---------|
 | Apache Maven | 3.x |
 | Apache Tomcat | 8.x / 9.x |
-| NetBeans IDE | — |
+| NetBeans IDE | 18 |
 | MySQL / MariaDB | 8.x / 10.x |
 
 ---
