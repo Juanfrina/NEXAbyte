@@ -1,0 +1,451 @@
+<mxfile host="app.diagrams.net" modified="2026-02-23" agent="draw.io" type="device">
+  <diagram id="nexabyte-mvc" name="NEXAbyte — Arquitectura MVC">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ============================================================ -->
+        <!-- TÍTULO -->
+        <!-- ============================================================ -->
+        <mxCell id="titulo" value="&lt;b&gt;NEXAbyte — Arquitectura MVC&lt;/b&gt;" style="text;html=1;fontSize=22;fontFamily=Helvetica;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="500" y="10" width="500" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- LEYENDA -->
+        <!-- ============================================================ -->
+        <mxCell id="leyenda_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="220" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="leyenda_titulo" value="&lt;b&gt;LEYENDA&lt;/b&gt;" style="text;html=1;fontSize=12;fontFamily=Helvetica;align=center;" vertex="1" parent="1">
+          <mxGeometry x="10" y="15" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Formulario -->
+        <mxCell id="ley1_icon" value="" style="shape=mxgraph.mockup.containers.marginRect;mainText=;fontSize=10;strokeColor=#333333;fillColor=#EEEEEE;" vertex="1" parent="1">
+          <mxGeometry x="25" y="45" width="24" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ley1_text" value="Formulario / Vista (JSP)" style="text;html=1;fontSize=10;fontFamily=Helvetica;align=left;" vertex="1" parent="1">
+          <mxGeometry x="58" y="45" width="160" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Servlet -->
+        <mxCell id="ley2_icon" value="" style="shape=mxgraph.mockup.containers.marginRect;mainText=;fontSize=10;strokeColor=#333333;fillColor=#D5E8D4;" vertex="1" parent="1">
+          <mxGeometry x="25" y="75" width="24" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ley2_text" value="Servlet (Controlador)" style="text;html=1;fontSize=10;fontFamily=Helvetica;align=left;" vertex="1" parent="1">
+          <mxGeometry x="58" y="75" width="160" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Modelo -->
+        <mxCell id="ley3_icon" value="" style="shape=mxgraph.mockup.containers.marginRect;mainText=;fontSize=10;strokeColor=#333333;fillColor=#DAE8FC;" vertex="1" parent="1">
+          <mxGeometry x="25" y="105" width="24" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ley3_text" value="Service / Modelo" style="text;html=1;fontSize=10;fontFamily=Helvetica;align=left;" vertex="1" parent="1">
+          <mxGeometry x="58" y="105" width="160" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Bean -->
+        <mxCell id="ley4_icon" value="B" style="shape=mxgraph.mockup.containers.marginRect;mainText=;fontSize=10;strokeColor=#333333;fillColor=#FFF2CC;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="25" y="135" width="24" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ley4_text" value="Bean / DTO" style="text;html=1;fontSize=10;fontFamily=Helvetica;align=left;" vertex="1" parent="1">
+          <mxGeometry x="58" y="135" width="160" height="20" as="geometry"/>
+        </mxCell>
+        <!-- DAO -->
+        <mxCell id="ley5_icon" value="" style="shape=mxgraph.mockup.containers.marginRect;mainText=;fontSize=10;strokeColor=#333333;fillColor=#E1D5E7;" vertex="1" parent="1">
+          <mxGeometry x="25" y="165" width="24" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ley5_text" value="DAO (Acceso a datos)" style="text;html=1;fontSize=10;fontFamily=Helvetica;align=left;" vertex="1" parent="1">
+          <mxGeometry x="58" y="165" width="160" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Flechas leyenda -->
+        <mxCell id="ley_f1" value="" style="endArrow=block;html=1;strokeColor=#333333;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="25" y="210" as="sourcePoint"/>
+            <mxPoint x="52" y="210" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ley_f1t" value="Flujo HTTP" style="text;html=1;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="58" y="200" width="120" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ley_f2" value="" style="endArrow=block;html=1;strokeColor=#333333;dashed=1;dashPattern=4 4;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="25" y="235" as="sourcePoint"/>
+            <mxPoint x="52" y="235" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ley_f2t" value="Utiliza / Instancia" style="text;html=1;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="58" y="225" width="120" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ley_f3" value="" style="endArrow=block;html=1;strokeColor=#CC0000;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="25" y="260" as="sourcePoint"/>
+            <mxPoint x="52" y="260" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ley_f3t" value="Respuesta AJAX (JSON)" style="text;html=1;fontSize=10;align=left;fontColor=#CC0000;" vertex="1" parent="1">
+          <mxGeometry x="58" y="250" width="160" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- FILTRO Y LISTENER (TRANSVERSALES) -->
+        <!-- ============================================================ -->
+        <mxCell id="transversal_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF9E6;strokeColor=#D6B656;dashed=1;dashPattern=5 5;" vertex="1" parent="1">
+          <mxGeometry x="370" y="60" width="820" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="filtro_utf8" value="&lt;b&gt;AUTF8&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Filtro UTF-8&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="390" y="67" width="100" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="session_listener" value="&lt;b&gt;SessionListener&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Carga categorías al iniciar&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="510" y="67" width="170" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="transversal_label" value="&lt;i&gt;Componentes transversales (Filter + Listener)&lt;/i&gt;" style="text;html=1;fontSize=9;fontColor=#B8860B;align=right;" vertex="1" parent="1">
+          <mxGeometry x="900" y="72" width="270" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- NAVEGADOR / VISTAS DE ENTRADA (izquierda) -->
+        <!-- ============================================================ -->
+        <mxCell id="nav_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEEEEE;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="200" height="310" as="geometry"/>
+        </mxCell>
+        <mxCell id="nav_title" value="&lt;b&gt;🌐 NAVEGADOR (Cliente)&lt;/b&gt;" style="text;html=1;fontSize=11;fontFamily=Helvetica;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="345" width="200" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="nav_index" value="index.jsp&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Catálogo principal&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="375" width="170" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="nav_registro" value="registro.jsp&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Formulario de registro&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="415" width="170" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="nav_cabecera" value="cabecera.inc&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Login modal · Buscador&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="455" width="170" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="nav_pie" value="pie.inc&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Modales · JavaScript · AJAX&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="495" width="170" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="nav_css" value="estilos.css&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Tema oscuro (~1900 líneas)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="535" width="170" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="nav_js" value="JavaScript (ES5)&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;XHR · Validaciones · Modales&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="575" width="170" height="32" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- CONTROLADORES (centro-izquierda) -->
+        <!-- ============================================================ -->
+        <mxCell id="ctrl_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="370" y="140" width="200" height="440" as="geometry"/>
+        </mxCell>
+        <mxCell id="ctrl_title" value="&lt;b&gt;⚙ CONTROLADORES&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Servlets (controllers/)&lt;/font&gt;" style="text;html=1;fontSize=12;fontFamily=Helvetica;align=center;" vertex="1" parent="1">
+          <mxGeometry x="370" y="145" width="200" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ctrl_front" value="&lt;b&gt;FrontController&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Navegación · Catálogo · Búsqueda · Filtros&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="385" y="185" width="170" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ctrl_usuario" value="&lt;b&gt;GestionUsuario&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Login · Logout · Perfil · Editar&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="385" y="235" width="170" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ctrl_pedido" value="&lt;b&gt;GestionPedido&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Carrito · Añadir · Tramitar pedido&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="385" y="285" width="170" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ctrl_registro" value="&lt;b&gt;RegistroController&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Registro · Avatar · Validación&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="385" y="335" width="170" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ctrl_ajax" value="&lt;b&gt;Ajax&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;NIF (org.json) · Peticiones ligeras&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="385" y="385" width="170" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ctrl_volver" value="&lt;b&gt;VolverController&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Redirección al inicio&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="385" y="435" width="170" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="ctrl_json_label" value="&lt;font style=&quot;font-size:8px&quot;&gt;Respuestas JSON&lt;br&gt;org.json · Gson&lt;/font&gt;" style="text;html=1;fontSize=9;fontColor=#CC0000;align=center;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="385" y="485" width="170" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- CAPA DE SERVICIO (centro-derecha) -->
+        <!-- ============================================================ -->
+        <mxCell id="srv_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="680" y="140" width="200" height="330" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv_title" value="&lt;b&gt;📦 CAPA DE SERVICIO&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Lógica de negocio (models/)&lt;/font&gt;" style="text;html=1;fontSize=12;fontFamily=Helvetica;align=center;" vertex="1" parent="1">
+          <mxGeometry x="680" y="145" width="200" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv_carrito" value="&lt;b&gt;CarritoService&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Cookie ↔ BD · Transferencia&lt;br&gt;1er login · Conteo artículos&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="695" y="185" width="170" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv_pedido" value="&lt;b&gt;PedidoService&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Tramitar · Historial · Detalle&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="695" y="243" width="170" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv_usuario" value="&lt;b&gt;UsuarioService&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Autenticar · Registrar · Editar&lt;br&gt;Último acceso&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="695" y="293" width="170" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv_security" value="&lt;b&gt;SecurityUtils&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Hash MD5 + UTF-8&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="695" y="351" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv_utils" value="&lt;b&gt;Utils&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;NIF · Constantes&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="785" y="351" width="80" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv_enum" value="&lt;b&gt;EnumConverter&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;BeanUtils enums&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="695" y="401" width="170" height="32" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- BEANS (debajo de controladores) -->
+        <!-- ============================================================ -->
+        <mxCell id="bean_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="310" y="620" width="320" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="bean_title" value="&lt;b&gt;🅱 BEANS (Entidades / DTOs)&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;JavaBeans (beans/)&lt;/font&gt;" style="text;html=1;fontSize=11;fontFamily=Helvetica;align=center;" vertex="1" parent="1">
+          <mxGeometry x="310" y="625" width="320" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="bean_usuario" value="&lt;b&gt;Usuario&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="325" y="660" width="80" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="bean_producto" value="&lt;b&gt;Producto&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="415" y="660" width="80" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="bean_categoria" value="&lt;b&gt;Categoria&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="505" y="660" width="80" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="bean_pedido" value="&lt;b&gt;Pedido&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="365" y="698" width="80" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="bean_linea" value="&lt;b&gt;LineaPedido&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6B656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="455" y="698" width="90" height="28" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- CAPA DAO (derecha) -->
+        <!-- ============================================================ -->
+        <mxCell id="dao_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1">
+          <mxGeometry x="680" y="510" width="320" height="230" as="geometry"/>
+        </mxCell>
+        <mxCell id="dao_title" value="&lt;b&gt;🗃 CAPA DAO&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Acceso a datos (DAO/ + DAOFactory/)&lt;/font&gt;" style="text;html=1;fontSize=11;fontFamily=Helvetica;align=center;" vertex="1" parent="1">
+          <mxGeometry x="680" y="515" width="320" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="dao_factory" value="&lt;b&gt;DAOFactory&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;Abstract Factory&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673A6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="790" y="550" width="110" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="dao_conn" value="&lt;b&gt;ConnectionFactory&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:8px&quot;&gt;JNDI · DataSource · Pool&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673A6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="695" y="550" width="85" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="dao_cat" value="&lt;b&gt;CategoriaDAO&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:7px&quot;&gt;ICategoriaDAO&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673A6;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="695" y="595" width="90" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="dao_prod" value="&lt;b&gt;ProductoDAO&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:7px&quot;&gt;IProductoDAO&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673A6;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="795" y="595" width="90" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="dao_usu" value="&lt;b&gt;UsuarioDAO&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:7px&quot;&gt;IUsuarioDAO&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673A6;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="695" y="640" width="90" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="dao_ped" value="&lt;b&gt;PedidoDAO&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:7px&quot;&gt;IPedidoDAO&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673A6;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="795" y="640" width="90" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="dao_linea" value="&lt;b&gt;LineaPedidoDAO&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:7px&quot;&gt;ILineaPedidoDAO&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673A6;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="745" y="685" width="100" height="35" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- BASE DE DATOS (abajo) -->
+        <!-- ============================================================ -->
+        <mxCell id="db" value="&lt;b&gt;MySQL / MariaDB&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;BD: nexabyte&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=8;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="780" y="790" width="130" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="db_tables" value="&lt;font style=&quot;font-size:8px&quot;&gt;usuarios · productos · categorias&lt;br&gt;pedidos · linea_pedido&lt;/font&gt;" style="text;html=1;fontSize=9;align=center;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="760" y="862" width="170" height="28" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- VISTAS DE SALIDA (derecha) -->
+        <!-- ============================================================ -->
+        <mxCell id="out_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEEEEE;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="140" width="200" height="440" as="geometry"/>
+        </mxCell>
+        <mxCell id="out_title" value="&lt;b&gt;📄 VISTAS DE SALIDA&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;JSP / JSTL + EL (JSP/vistas/)&lt;/font&gt;" style="text;html=1;fontSize=11;fontFamily=Helvetica;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="145" width="200" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="out_productos" value="productos.jsp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="185" width="170" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="out_producto" value="producto.jsp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="218" width="170" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="out_carrito" value="carrito.jsp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="251" width="170" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="out_perfil" value="perfil.jsp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="284" width="170" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="out_editarPerfil" value="editarPerfil.jsp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="317" width="170" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="out_acceder" value="acceder.jsp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="350" width="170" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="out_registro" value="registro.jsp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="383" width="170" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="out_pedido" value="pedido.jsp · verPedidos.jsp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="416" width="170" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="out_avisos" value="aviso.jsp · notificacion.jsp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="455" width="170" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="out_errors" value="error.jsp · error404.jsp · error500.jsp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CC0000;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="494" width="170" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="out_includes" value="&lt;i&gt;Incluyen: cabecera.inc · metas.inc · pie.inc&lt;/i&gt;" style="text;html=1;fontSize=8;fontColor=#666666;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="530" width="200" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- FLECHAS: Navegador → Controladores -->
+        <!-- ============================================================ -->
+        <mxCell id="f_nav_front" value="" style="endArrow=block;html=1;strokeColor=#333333;endFill=1;exitX=1;exitY=0.2;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nav_box" target="ctrl_front">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_nav_front_label" value="&lt;font style=&quot;font-size:8px&quot;&gt;GET/POST&lt;/font&gt;" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="f_nav_front">
+          <mxGeometry x="-0.2" relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_nav_usuario" value="" style="endArrow=block;html=1;strokeColor=#333333;endFill=1;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nav_box" target="ctrl_usuario">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_nav_pedido" value="" style="endArrow=block;html=1;strokeColor=#333333;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nav_box" target="ctrl_pedido">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_nav_registro" value="" style="endArrow=block;html=1;strokeColor=#333333;endFill=1;exitX=1;exitY=0.65;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nav_box" target="ctrl_registro">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_nav_ajax" value="" style="endArrow=block;html=1;strokeColor=#333333;endFill=1;exitX=1;exitY=0.8;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nav_box" target="ctrl_ajax">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_nav_ajax_label" value="&lt;font style=&quot;font-size:8px;color:#CC0000&quot;&gt;AJAX (XHR)&lt;/font&gt;" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="f_nav_ajax">
+          <mxGeometry x="-0.2" relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- FLECHAS: Controladores → Servicios (dashed) -->
+        <!-- ============================================================ -->
+        <mxCell id="f_ctrl_srv1" value="" style="endArrow=block;html=1;strokeColor=#6C8EBF;dashed=1;dashPattern=5 5;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ctrl_front" target="srv_carrito">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_ctrl_srv2" value="" style="endArrow=block;html=1;strokeColor=#6C8EBF;dashed=1;dashPattern=5 5;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ctrl_usuario" target="srv_usuario">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_ctrl_srv3" value="" style="endArrow=block;html=1;strokeColor=#6C8EBF;dashed=1;dashPattern=5 5;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ctrl_pedido" target="srv_pedido">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_ctrl_srv4" value="" style="endArrow=block;html=1;strokeColor=#6C8EBF;dashed=1;dashPattern=5 5;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.8;entryDx=0;entryDy=0;" edge="1" parent="1" source="ctrl_registro" target="srv_usuario">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- FLECHAS: Controladores → Vistas de salida -->
+        <!-- ============================================================ -->
+        <mxCell id="f_ctrl_out1" value="" style="endArrow=block;html=1;strokeColor=#333333;endFill=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="ctrl_box" target="out_productos">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_ctrl_out1_label" value="&lt;font style=&quot;font-size:8px&quot;&gt;forward&lt;/font&gt;" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="f_ctrl_out1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_ctrl_out2" value="" style="endArrow=block;html=1;strokeColor=#333333;endFill=1;exitX=1;exitY=0.45;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="ctrl_box" target="out_carrito">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_ctrl_out3" value="" style="endArrow=block;html=1;strokeColor=#333333;endFill=1;exitX=1;exitY=0.55;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="ctrl_box" target="out_perfil">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_ctrl_out4" value="" style="endArrow=block;html=1;strokeColor=#333333;endFill=1;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="ctrl_box" target="out_pedido">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- FLECHAS AJAX: Controladores → Navegador (rojo, vuelta) -->
+        <!-- ============================================================ -->
+        <mxCell id="f_ajax_return" value="" style="endArrow=block;html=1;strokeColor=#CC0000;endFill=1;curved=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.95;entryDx=0;entryDy=0;" edge="1" parent="1" source="ctrl_box" target="nav_box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="560"/>
+              <mxPoint x="280" y="600"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_ajax_return_label" value="&lt;font style=&quot;font-size:8px;color:#CC0000&quot;&gt;&lt;b&gt;JSON&lt;/b&gt;&lt;br&gt;org.json · Gson&lt;/font&gt;" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="f_ajax_return">
+          <mxGeometry x="0.2" relative="1" as="geometry">
+            <mxPoint x="-10" y="-5" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- FLECHAS: Controladores → Beans (punteadas, hacia abajo) -->
+        <!-- ============================================================ -->
+        <mxCell id="f_ctrl_bean" value="" style="endArrow=block;html=1;strokeColor=#D6B656;dashed=1;dashPattern=3 3;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ctrl_box" target="bean_box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_ctrl_bean_label" value="&lt;font style=&quot;font-size:8px&quot;&gt;instancia / populate&lt;/font&gt;" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="f_ctrl_bean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- FLECHAS: Servicios → DAO (dashed) -->
+        <!-- ============================================================ -->
+        <mxCell id="f_srv_dao" value="" style="endArrow=block;html=1;strokeColor=#9673A6;dashed=1;dashPattern=5 5;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="srv_box" target="dao_box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_srv_dao_label" value="&lt;font style=&quot;font-size:8px&quot;&gt;DAOFactory.getXxxDAO()&lt;/font&gt;" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="f_srv_dao">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- FLECHAS: DAO → Base de Datos -->
+        <!-- ============================================================ -->
+        <mxCell id="f_dao_db" value="" style="endArrow=block;html=1;strokeColor=#333333;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dao_box" target="db">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_dao_db_label" value="&lt;font style=&quot;font-size:8px&quot;&gt;JDBC (PreparedStatement)&lt;/font&gt;" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="f_dao_db">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- FLECHAS: Beans ← → DAO (bidireccional) -->
+        <!-- ============================================================ -->
+        <mxCell id="f_bean_dao" value="" style="endArrow=block;html=1;strokeColor=#D6B656;dashed=1;dashPattern=3 3;endFill=1;startArrow=block;startFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" edge="1" parent="1" source="bean_box" target="dao_box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_bean_dao_label" value="&lt;font style=&quot;font-size:8px&quot;&gt;mapear ↔ entidad&lt;/font&gt;" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="f_bean_dao">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- VISTAS DE SALIDA → NAVEGADOR (circular, response) -->
+        <!-- ============================================================ -->
+        <mxCell id="f_out_nav" value="" style="endArrow=block;html=1;strokeColor=#333333;endFill=1;curved=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="out_box" target="nav_box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1200" y="125"/>
+              <mxPoint x="140" y="125"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_out_nav_label" value="&lt;font style=&quot;font-size:8px&quot;&gt;HTTP Response (HTML renderizado)&lt;/font&gt;" style="edgeLabel;html=1;" vertex="1" connectable="0" parent="f_out_nav">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
