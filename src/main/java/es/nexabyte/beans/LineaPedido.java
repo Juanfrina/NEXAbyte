@@ -2,6 +2,7 @@ package es.nexabyte.beans;
 import java.io.Serializable;
 /**
  * Clase que representa una línea de pedido en un sistema de pedidos.
+ * Cada línea asocia un producto con un pedido e indica la cantidad solicitada.
  * Implementa la interfaz {@link Serializable} para permitir su serialización.
  * @author jfco1
  */
@@ -14,17 +15,17 @@ public class LineaPedido implements Serializable {
     /**
      * El pedido al que pertenece esta línea de pedido.
      */
-    private Pedido idPedido;
+    private Pedido pedido;
 
     /**
      * El producto asociado a esta línea de pedido.
      */
-    private Producto idProducto;
+    private Producto producto;
 
     /**
      * La cantidad del producto en la línea de pedido.
      */
-    private Byte cantidad;
+    private Integer cantidad;
 
     /**
      * Obtiene el identificador de la línea de pedido.
@@ -49,17 +50,17 @@ public class LineaPedido implements Serializable {
      *
      * @return el {@link Pedido} asociado a esta línea de pedido.
      */
-    public Pedido getIdPedido() {
-        return idPedido;
+    public Pedido getPedido() {
+        return pedido;
     }
 
     /**
      * Establece el pedido al que pertenece esta línea de pedido.
      *
-     * @param idPedido un objeto {@link Pedido} que representa el pedido al que se asociará esta línea de pedido.
+     * @param pedido un objeto {@link Pedido} que representa el pedido al que se asociará esta línea de pedido.
      */
-    public void setIdPedido(Pedido idPedido) {
-        this.idPedido = idPedido;
+    public void setPedido(Pedido pedido) {
+        this.pedido = pedido;
     }
 
     /**
@@ -67,34 +68,34 @@ public class LineaPedido implements Serializable {
      *
      * @return el {@link Producto} asociado a esta línea de pedido.
      */
-    public Producto getIdProducto() {
-        return idProducto;
+    public Producto getProducto() {
+        return producto;
     }
 
     /**
      * Establece el producto asociado a esta línea de pedido.
      *
-     * @param idProducto un objeto {@link Producto} que se asociará a esta línea de pedido.
+     * @param producto un objeto {@link Producto} que se asociará a esta línea de pedido.
      */
-    public void setIdProducto(Producto idProducto) {
-        this.idProducto = idProducto;
+    public void setProducto(Producto producto) {
+        this.producto = producto;
     }
 
     /**
      * Obtiene la cantidad del producto en esta línea de pedido.
      *
-     * @return un valor {@link Byte} que representa la cantidad del producto.
+     * @return un valor {@link Integer} que representa la cantidad del producto.
      */
-    public Byte getCantidad() {
+    public Integer getCantidad() {
         return cantidad;
     }
 
     /**
      * Establece la cantidad del producto en esta línea de pedido.
      *
-     * @param cantidad un valor {@link Byte} que representa la cantidad del producto en la línea de pedido.
+     * @param cantidad un valor {@link Integer} que representa la cantidad del producto en la línea de pedido.
      */
-    public void setCantidad(Byte cantidad) {
+    public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
     }
 

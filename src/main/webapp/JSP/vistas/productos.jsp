@@ -1,17 +1,8 @@
 <%-- 
     Document   : productos
-    Created on : 7 feb. 2026, 12:57:03
+    Descripción: Redirección a la landing page principal que ya muestra productos
     Author     : jfco1
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:redirect url="/FrontController?op=inicio"/>

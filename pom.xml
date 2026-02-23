@@ -80,8 +80,30 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
         </dependency>
+        
+        <!--
+        ORG.JSON
+        Librería ligera para construir objetos JSON manualmente.
+        Se usa en Ajax.java y GestionUsuario.java para respuestas Ajax.
+        -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20231013</version>
+        </dependency>
+        
+        <!--
+        GSON (Google)
+        Librería para serializar/deserializar objetos Java a JSON.
+        Se usa en GestionPedido.java y RegistroController.java para respuestas Ajax.
+        -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
     </dependencies>
-
+    
     <!--
     ============================================================================
     BUILD - Configuración de la construcción del proyecto

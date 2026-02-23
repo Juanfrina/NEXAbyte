@@ -6,9 +6,9 @@
         maxActive="100"
         maxIdle="30"
         maxWait="10000"
-        name="jdbc/Usuario"
+        name="jdbc/nexabyte"
         password="NEXAbyte123"
         type="javax.sql.DataSource"
-        url="jdbc:mysql://localhost:3306/nexabyte"
+        url="jdbc:mysql://localhost:3306/nexabyte?useSSL=false&amp;serverTimezone=Europe/Madrid&amp;allowPublicKeyRetrieval=true"
         username="nexabyte_user"/>
 </Context>

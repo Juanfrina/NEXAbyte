@@ -1,5 +1,6 @@
 package es.nexabyte.models;
 
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -21,7 +22,7 @@ public class SecurityUtils {
         
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
-            byte[] digest = md.digest(password.getBytes());
+            byte[] digest = md.digest(password.getBytes(StandardCharsets.UTF_8));
             
             StringBuilder sb = new StringBuilder();
             for (byte b : digest) {

@@ -3,9 +3,11 @@
 METAS.INC - Metadatos comunes para todas las páginas
 ================================================================================
 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Juan Fco Hurtado Perez">
 <meta name="generator" content="NetBeans">
-<meta name="copyright" content="DWES - Desarrollo Web en Entorno Servidor">
+<meta name="copyright" content="NEXAbyte - Tienda Online de Componentes Informáticos">
 <meta name="robots" content="index, follow">
-<meta name="keywords" content="registro, usuarios, login, MVC, Java EE, JSTL, Servlets, DAO">
-<meta name="description" content="Aplicación web para gestión de usuarios con patrón MVC, DAO y Factory.">
+<meta name="keywords" content="componentes informáticos, tienda online, procesadores, tarjetas gráficas, memorias RAM, discos duros, SSD, portátiles, sobremesa, hardware">
+<meta name="description" content="NEXAbyte - Tu tienda online de componentes informáticos. Encuentra procesadores, tarjetas gráficas, memorias, almacenamiento y más al mejor precio.">
+<link rel="icon" type="image/jpeg" href="${contexto}/IMG/Logo.jpg">

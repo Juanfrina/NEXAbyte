@@ -6,18 +6,20 @@ C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\bea
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\controllers\VolverController.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\DAO\LineaPedidoDAO.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\DAO\ICategoriaDAO.java
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\models\UsuarioService.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\DAO\PedidoDAO.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\controllers\RegistroController.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\DAO\ProductoDAO.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\DAO\UsuarioDAO.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\beans\Producto.java
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\controllers\Ajax.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\DAO\CategoriaDAO.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\DAO\IProductoDAO.java
-C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\DAO\ILineaPedido.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\DAO\IPedidoDAO.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\models\SecurityUtils.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\controllers\FrontController.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\models\EnumConverter.java
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\models\PedidoService.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\beans\Usuario.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\models\Utils.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\controllers\GestionPedido.java
@@ -25,3 +27,5 @@ C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\DAO
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\listener\SessionListener.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\beans\Categoria.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\filters\AUTF8.java
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\DAO\ILineaPedidoDAO.java
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\models\CarritoService.java

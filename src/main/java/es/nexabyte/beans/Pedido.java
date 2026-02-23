@@ -20,11 +20,11 @@ public class Pedido implements Serializable {
 
     /**
      * Enum que representa el estado del pedido.
-     * 'c' para confirmado y 'f' para finalizado.
+     * 'c' para carrito (pedido en curso) y 'f' para finalizado (pagado).
      */
     public enum Estado {
-        c, // Confirmado
-        f  // Finalizado
+        c, // Carrito (pedido en curso)
+        f  // Finalizado (pedido pagado)
     };
 
     /**
