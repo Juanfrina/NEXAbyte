@@ -282,24 +282,31 @@
                 document.querySelectorAll(".carrito-item").forEach(function (item) {
                     var precioTxt = item.querySelector(".carrito-col-precio").textContent;
                     var cantidad  = parseInt(item.querySelector(".cantidad-valor").textContent, 10);
-                    var precio    = parseFloat(precioTxt.replace(/[^\d,.-]/g, "").replace(",", "."));
+                    // Quitar todo excepto dígitos, coma y punto; eliminar puntos de miles; coma → punto decimal
+                    var precio    = parseFloat(precioTxt.replace(/[^\d,.-]/g, "").replace(/\./g, "").replace(",", "."));
                     var subtotal  = precio * cantidad;
                     baseImponible += subtotal;
-                    item.querySelector(".carrito-col-total strong").textContent =
-                        subtotal.toFixed(2).replace(".", ",") + " \u20AC";
+                    item.querySelector(".carrito-col-total strong").textContent = formatoEuro(subtotal);
                 });
 
                 var filas = document.querySelectorAll(".carrito-resumen-fila");
                 if (filas.length >= 3) {
                     var iva   = baseImponible * 0.21;
                     var total = baseImponible + iva;
-                    filas[0].querySelector("span:last-child").textContent =
-                        baseImponible.toFixed(2).replace(".", ",") + " \u20AC";
-                    filas[1].querySelector("span:last-child").textContent =
-                        iva.toFixed(2).replace(".", ",") + " \u20AC";
-                    filas[2].querySelector("span:last-child").textContent =
-                        total.toFixed(2).replace(".", ",") + " \u20AC";
+                    filas[0].querySelector("span:last-child").textContent = formatoEuro(baseImponible);
+                    filas[1].querySelector("span:last-child").textContent = formatoEuro(iva);
+                    filas[2].querySelector("span:last-child").textContent = formatoEuro(total);
                 }
+            }
+
+            /**
+             * Formatea un número al estilo español: punto de miles, coma decimal, símbolo €.
+             * Ejemplo: 1880.00 → "1.880,00 €"
+             */
+            function formatoEuro(numero) {
+                var partes = numero.toFixed(2).split(".");
+                var entero = partes[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                return entero + "," + partes[1] + " \u20AC";
             }
 
             /** Actualiza el badge del carrito en la cabecera. */
