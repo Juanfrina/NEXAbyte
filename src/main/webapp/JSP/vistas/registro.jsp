@@ -66,7 +66,7 @@
                                              alt="Avatar Mujer" title="Mujer">
                                     </label>
                                     <label class="avatar-opcion-mini" title="Avatar neutro">
-                                        <input type="radio" name="avatarPredefinido" value="Otro.jpg" checked>
+                                        <input type="radio" name="avatarPredefinido" value="Otro.jpg">
                                         <img src="${contexto}/IMG/avatar/Otro.jpg" 
                                              alt="Avatar Otro" title="Otro">
                                     </label>

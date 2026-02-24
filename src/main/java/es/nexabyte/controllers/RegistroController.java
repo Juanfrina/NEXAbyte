@@ -147,7 +147,7 @@ public class RegistroController extends HttpServlet {
             return;
         }
         if (avatarNombre == null) {
-            avatarNombre = "Otro.jpg";
+            avatarNombre = "default.png";
         }
 
         // Cargar bean Usuario con BeanUtils (patrón requerido por el enunciado)
@@ -280,10 +280,11 @@ public class RegistroController extends HttpServlet {
 
         // 2. Si no hay archivo, usar avatar predefinido
         String predefinido = request.getParameter("avatarPredefinido");
-        if ("Hombre.jpg".equals(predefinido) || "Mujer.jpg".equals(predefinido)) {
+        if ("Hombre.jpg".equals(predefinido) || "Mujer.jpg".equals(predefinido) || "Otro.jpg".equals(predefinido)) {
             return predefinido;
         }
-        return "Otro.jpg";
+        // Si no eligió ningún avatar, devolver null (se usará default.png)
+        return null;
     }
 
     /**

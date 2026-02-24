@@ -45,7 +45,8 @@
                         
                         <div class="perfil-contenido">
                             <div class="perfil-avatar">
-                                <img src="${contexto}/IMG/avatar/${u.avatar}" 
+                                <c:set var="avatarImg" value="${u.avatar == 'default.png' ? 'Otro.jpg' : u.avatar}"/>
+                                <img src="${contexto}/IMG/avatar/${avatarImg}" 
                                      alt="Avatar de ${u.nombre}" 
                                      title="Avatar de ${u.nombre}"
                                      onerror="this.src='${contexto}/IMG/avatar/Otro.jpg'">

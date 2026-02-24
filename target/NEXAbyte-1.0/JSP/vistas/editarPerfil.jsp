@@ -43,7 +43,8 @@
                             <label class="formulario-etiqueta">Avatar</label>
                             <div class="avatar-upload-grupo">
                                 <div class="avatar-preview" id="avatarPreview">
-                                    <img src="${contexto}/IMG/avatar/${u.avatar}" 
+                                    <c:set var="avatarImg" value="${u.avatar == 'default.png' ? 'Otro.jpg' : u.avatar}"/>
+                                    <img src="${contexto}/IMG/avatar/${avatarImg}" 
                                          alt="Avatar actual" title="Tu avatar actual"
                                          id="avatarPreviewImg"
                                          onerror="this.src='${contexto}/IMG/avatar/Otro.jpg'">
@@ -72,7 +73,7 @@
                                         </label>
                                         <label class="avatar-opcion-mini" title="Avatar neutro">
                                             <input type="radio" name="avatarPredefinido" value="Otro.jpg"
-                                                   ${u.avatar != 'Hombre.jpg' && u.avatar != 'Mujer.jpg' ? 'checked' : ''}>
+                                                   ${u.avatar == 'Otro.jpg' ? 'checked' : ''}>
                                             <img src="${contexto}/IMG/avatar/Otro.jpg" 
                                                  alt="Avatar Otro" title="Otro">
                                         </label>
