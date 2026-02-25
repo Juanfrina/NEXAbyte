@@ -71,7 +71,7 @@
 
 <%-- ====== MODAL REGISTRO ====== --%>
 <div id="modalRegistro" class="modal-overlay" style="display:none">
-    <div class="modal-contenido modal-form formulario-contenedor modal-scroll">
+    <div class="modal-contenido modal-form formulario-contenedor modal-registro-amplio">
         <button type="button" class="modal-cerrar" onclick="cerrarModalRegistro()" title="Cerrar">&times;</button>
         <h2 class="formulario-titulo">Crear cuenta</h2>
         <div id="modalRegistroError" class="alerta alerta-error" style="display:none">
@@ -112,29 +112,32 @@
                     </div>
                 </div>
             </div>
-            <%-- Nombre --%>
-            <div class="formulario-grupo">
-                <label for="m-nombre" class="formulario-etiqueta">Nombre <span class="obligatorio">*</span></label>
-                <input type="text" id="m-nombre" name="nombre" class="formulario-input" placeholder="Tu nombre" required title="Introduce tu nombre">
-            </div>
-            <%-- Apellidos --%>
-            <div class="formulario-grupo">
-                <label for="m-apellidos" class="formulario-etiqueta">Apellidos <span class="obligatorio">*</span></label>
-                <input type="text" id="m-apellidos" name="apellidos" class="formulario-input" placeholder="Tus apellidos" required title="Introduce tus apellidos">
-            </div>
-            <%-- NIF --%>
-            <div class="formulario-grupo">
-                <label for="m-nif" class="formulario-etiqueta">NIF <span class="obligatorio">*</span></label>
-                <div style="display:flex; gap:0.5rem; align-items:center;">
-                    <input type="text" id="m-nif" name="nif" class="formulario-input" style="flex:1;"
-                           placeholder="12345678" maxlength="8" pattern="[0-9]{8}" required title="8 d&iacute;gitos del NIF">
-                    <span id="m-letraNif" class="nif-letra" title="Letra calculada">-</span>
+            <%-- Nombre + Apellidos --%>
+            <div class="formulario-fila">
+                <div class="formulario-grupo">
+                    <label for="m-nombre" class="formulario-etiqueta">Nombre <span class="obligatorio">*</span></label>
+                    <input type="text" id="m-nombre" name="nombre" class="formulario-input" placeholder="Tu nombre" required title="Introduce tu nombre">
+                </div>
+                <div class="formulario-grupo">
+                    <label for="m-apellidos" class="formulario-etiqueta">Apellidos <span class="obligatorio">*</span></label>
+                    <input type="text" id="m-apellidos" name="apellidos" class="formulario-input" placeholder="Tus apellidos" required title="Introduce tus apellidos">
                 </div>
             </div>
-            <%-- Teléfono --%>
-            <div class="formulario-grupo">
-                <label for="m-telefono" class="formulario-etiqueta">Tel&eacute;fono</label>
-                <input type="tel" id="m-telefono" name="telefono" class="formulario-input" placeholder="612345678" pattern="[0-9]{9}" title="Tel&eacute;fono de 9 d&iacute;gitos">
+            <%-- NIF + Teléfono --%>
+            <div class="formulario-fila">
+                <div class="formulario-grupo">
+                    <label for="m-nif" class="formulario-etiqueta">NIF <span class="obligatorio">*</span></label>
+                    <div style="display:flex; gap:0.5rem; align-items:center;">
+                        <input type="text" id="m-nif" name="nif" class="formulario-input" style="flex:1;"
+                               placeholder="12345678" maxlength="8" pattern="[0-9]{8}" required title="8 d&iacute;gitos del NIF">
+                        <span id="m-letraNif" class="nif-letra" title="Letra calculada">-</span>
+                    </div>
+                </div>
+                <div class="formulario-grupo">
+                    <label for="m-telefono" class="formulario-etiqueta">Tel&eacute;fono</label>
+                    <input type="tel" id="m-telefono" name="telefono" class="formulario-input" placeholder="612345678" pattern="[6789][0-9]{8}" maxlength="9" title="Tel&eacute;fono de 9 d&iacute;gitos que empiece por 6, 7, 8 o 9">
+                    <span class="formulario-feedback" id="m-telefonoFeedback"></span>
+                </div>
             </div>
             <%-- Email --%>
             <div class="formulario-grupo">
@@ -142,44 +145,47 @@
                 <input type="email" id="m-email" name="email" class="formulario-input" placeholder="ejemplo@correo.com" required title="Introduce tu correo electr&oacute;nico">
                 <span class="formulario-feedback" id="m-emailFeedback"></span>
             </div>
-            <%-- Dirección --%>
-            <div class="formulario-grupo">
-                <label for="m-direccion" class="formulario-etiqueta">Direcci&oacute;n <span class="obligatorio">*</span></label>
-                <input type="text" id="m-direccion" name="direccion" class="formulario-input" placeholder="Calle, n&uacute;mero, piso..." required title="Introduce tu direcci&oacute;n">
-            </div>
-            <%-- Código postal --%>
-            <div class="formulario-grupo">
-                <label for="m-codigoPostal" class="formulario-etiqueta">C&oacute;digo postal <span class="obligatorio">*</span></label>
-                <input type="text" id="m-codigoPostal" name="codigoPostal" class="formulario-input" placeholder="28001" maxlength="5" pattern="[0-9]{5}" required title="C&oacute;digo postal de 5 d&iacute;gitos">
-            </div>
-            <%-- Localidad --%>
-            <div class="formulario-grupo">
-                <label for="m-localidad" class="formulario-etiqueta">Localidad <span class="obligatorio">*</span></label>
-                <input type="text" id="m-localidad" name="localidad" class="formulario-input" placeholder="Tu localidad" required title="Introduce tu localidad">
-            </div>
-            <%-- Provincia --%>
-            <div class="formulario-grupo">
-                <label for="m-provincia" class="formulario-etiqueta">Provincia <span class="obligatorio">*</span></label>
-                <input type="text" id="m-provincia" name="provincia" class="formulario-input" placeholder="Tu provincia" required title="Introduce tu provincia">
-            </div>
-            <%-- Contraseña --%>
-            <div class="formulario-grupo">
-                <label for="m-password" class="formulario-etiqueta">Contrase&ntilde;a <span class="obligatorio">*</span></label>
-                <div class="password-contenedor">
-                    <input type="password" id="m-password" name="password" class="formulario-input"
-                           placeholder="M&iacute;nimo 6 caracteres" required minlength="6" title="Contrase&ntilde;a de al menos 6 caracteres">
-                    <button type="button" class="password-toggle" onclick="togglePassword('m-password', this)"
-                            title="Mostrar/ocultar contrase&ntilde;a" aria-label="Mostrar contrase&ntilde;a">&#128065;</button>
+            <%-- Dirección + Código postal --%>
+            <div class="formulario-fila">
+                <div class="formulario-grupo" style="flex:2;">
+                    <label for="m-direccion" class="formulario-etiqueta">Direcci&oacute;n <span class="obligatorio">*</span></label>
+                    <input type="text" id="m-direccion" name="direccion" class="formulario-input" placeholder="Calle, n&uacute;mero, piso..." required title="Introduce tu direcci&oacute;n">
+                </div>
+                <div class="formulario-grupo">
+                    <label for="m-codigoPostal" class="formulario-etiqueta">C&oacute;digo postal <span class="obligatorio">*</span></label>
+                    <input type="text" id="m-codigoPostal" name="codigoPostal" class="formulario-input" placeholder="28001" maxlength="5" pattern="[0-9]{5}" required title="C&oacute;digo postal de 5 d&iacute;gitos">
                 </div>
             </div>
-            <%-- Repetir contraseña --%>
-            <div class="formulario-grupo">
-                <label for="m-password2" class="formulario-etiqueta">Repetir contrase&ntilde;a <span class="obligatorio">*</span></label>
-                <div class="password-contenedor">
-                    <input type="password" id="m-password2" name="password2" class="formulario-input"
-                           placeholder="Repite la contrase&ntilde;a" required title="Repite la contrase&ntilde;a">
-                    <button type="button" class="password-toggle" onclick="togglePassword('m-password2', this)"
-                            title="Mostrar/ocultar contrase&ntilde;a" aria-label="Mostrar contrase&ntilde;a">&#128065;</button>
+            <%-- Localidad + Provincia --%>
+            <div class="formulario-fila">
+                <div class="formulario-grupo">
+                    <label for="m-localidad" class="formulario-etiqueta">Localidad <span class="obligatorio">*</span></label>
+                    <input type="text" id="m-localidad" name="localidad" class="formulario-input" placeholder="Tu localidad" required title="Introduce tu localidad">
+                </div>
+                <div class="formulario-grupo">
+                    <label for="m-provincia" class="formulario-etiqueta">Provincia <span class="obligatorio">*</span></label>
+                    <input type="text" id="m-provincia" name="provincia" class="formulario-input" placeholder="Tu provincia" required title="Introduce tu provincia">
+                </div>
+            </div>
+            <%-- Contraseña + Repetir --%>
+            <div class="formulario-fila">
+                <div class="formulario-grupo">
+                    <label for="m-password" class="formulario-etiqueta">Contrase&ntilde;a <span class="obligatorio">*</span></label>
+                    <div class="password-contenedor">
+                        <input type="password" id="m-password" name="password" class="formulario-input"
+                               placeholder="M&iacute;nimo 6 caracteres" required minlength="6" title="Contrase&ntilde;a de al menos 6 caracteres">
+                        <button type="button" class="password-toggle" onclick="togglePassword('m-password', this)"
+                                title="Mostrar/ocultar contrase&ntilde;a" aria-label="Mostrar contrase&ntilde;a">&#128065;</button>
+                    </div>
+                </div>
+                <div class="formulario-grupo">
+                    <label for="m-password2" class="formulario-etiqueta">Repetir contrase&ntilde;a <span class="obligatorio">*</span></label>
+                    <div class="password-contenedor">
+                        <input type="password" id="m-password2" name="password2" class="formulario-input"
+                               placeholder="Repite la contrase&ntilde;a" required title="Repite la contrase&ntilde;a">
+                        <button type="button" class="password-toggle" onclick="togglePassword('m-password2', this)"
+                                title="Mostrar/ocultar contrase&ntilde;a" aria-label="Mostrar contrase&ntilde;a">&#128065;</button>
+                    </div>
                 </div>
             </div>
             <%-- Botones --%>
@@ -300,6 +306,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /* === Email check en modal registro === */
+    var mTel = document.getElementById('m-telefono');
+    var mTelFb = document.getElementById('m-telefonoFeedback');
+    if (mTel) {
+        mTel.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length === 0) {
+                mTelFb.textContent = ''; mTelFb.className = 'formulario-feedback';
+            } else if (!/^[6789]/.test(this.value)) {
+                mTelFb.textContent = '\u26A0 Debe empezar por 6, 7, 8 o 9';
+                mTelFb.className = 'formulario-feedback feedback-invalido';
+            } else if (this.value.length < 9) {
+                mTelFb.textContent = '\u26A0 Debe tener 9 d\u00edgitos';
+                mTelFb.className = 'formulario-feedback feedback-invalido';
+            } else {
+                mTelFb.textContent = '\u2713 Tel\u00e9fono v\u00e1lido';
+                mTelFb.className = 'formulario-feedback feedback-valido';
+            }
+        });
+    }
+
     var mEmail = document.getElementById('m-email');
     var mEmailFb = document.getElementById('m-emailFeedback');
     var mEmailTimer = null;

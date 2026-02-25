@@ -129,8 +129,9 @@
                                class="formulario-input" 
                                value="${param.telefono}" 
                                placeholder="612345678"
-                               pattern="[0-9]{9}"
-                               title="Introduce un teléfono de 9 dígitos">
+                               pattern="[6789][0-9]{8}" maxlength="9"
+                               title="Teléfono de 9 dígitos que empiece por 6, 7, 8 o 9">
+                        <span class="formulario-feedback" id="telefonoFeedback"></span>
                     </div>
                     
                     <!-- Email -->

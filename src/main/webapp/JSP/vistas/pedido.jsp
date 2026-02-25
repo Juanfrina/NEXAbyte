@@ -38,8 +38,9 @@
                             </small>
                         </h2>
                         
-                        <div class="carrito-tabla">
+                        <div class="carrito-tabla pedido-tabla">
                             <div class="carrito-cabecera">
+                                <span class="carrito-col-id">ID</span>
                                 <span class="carrito-col-img">Imagen</span>
                                 <span class="carrito-col-nombre">Producto</span>
                                 <span class="carrito-col-precio">Precio ud.</span>
@@ -49,6 +50,9 @@
                             
                             <c:forEach var="linea" items="${pedido.lineasPedidos}">
                                 <div class="carrito-item">
+                                    <div class="carrito-col-id">
+                                        ${linea.producto.idProducto}
+                                    </div>
                                     <div class="carrito-col-img">
                                         <img src="${contexto}/IMG/imagen/productos/${linea.producto.imagen}.jpg" 
                                              alt="${linea.producto.nombre}" 

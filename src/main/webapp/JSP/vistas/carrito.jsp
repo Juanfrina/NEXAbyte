@@ -48,6 +48,7 @@
                         <div class="carrito-tabla">
                             <!-- Cabecera tabla -->
                             <div class="carrito-cabecera">
+                                <span class="carrito-col-id">ID</span>
                                 <span class="carrito-col-img">Imagen</span>
                                 <span class="carrito-col-nombre">Producto</span>
                                 <span class="carrito-col-precio">Precio ud.</span>
@@ -62,6 +63,9 @@
                                 <c:set var="subtotal" value="${linea.producto.precio * linea.cantidad}"/>
                                 <c:set var="baseImponible" value="${baseImponible + subtotal}"/>
                                 <div class="carrito-item" id="linea-${linea.producto.idProducto}">
+                                    <div class="carrito-col-id">
+                                        ${linea.producto.idProducto}
+                                    </div>
                                     <div class="carrito-col-img">
                                         <img src="${contexto}/IMG/imagen/productos/${linea.producto.imagen}.jpg" 
                                              alt="${linea.producto.nombre}" 

@@ -32,10 +32,11 @@
                     <section class="perfil-seccion">
                         <h2 class="seccion-titulo">Mi perfil</h2>
                         
-                        <c:if test="${not empty mensaje}">
+                        <c:if test="${not empty sessionScope.mensajeFlash}">
                             <div class="alerta alerta-exito">
-                                <span class="alerta-icono">&#10003;</span> ${mensaje}
+                                <span class="alerta-icono">&#10003;</span> ${sessionScope.mensajeFlash}
                             </div>
+                            <c:remove var="mensajeFlash" scope="session"/>
                         </c:if>
                         <c:if test="${not empty error}">
                             <div class="alerta alerta-error">

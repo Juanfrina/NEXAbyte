@@ -98,6 +98,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // ==================== TELÉFONO ====================
+    const telefonoInput = document.getElementById("telefono");
+    const telefonoFeedback = document.getElementById("telefonoFeedback");
+    if (telefonoInput) {
+        telefonoInput.addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "");
+            if (this.value.length === 0) {
+                limpiarFeedback(this, telefonoFeedback);
+            } else if (!/^[6789]/.test(this.value)) {
+                setInvalido(this, telefonoFeedback, "Debe empezar por 6, 7, 8 o 9");
+            } else if (this.value.length < 9) {
+                setInvalido(this, telefonoFeedback, "Debe tener 9 dígitos");
+            } else {
+                setValido(this, telefonoFeedback, "Teléfono válido");
+            }
+        });
+    }
+
     // ==================== CONTRASEÑA ====================
     if (passwordInput) {
         passwordInput.addEventListener("input", function () {

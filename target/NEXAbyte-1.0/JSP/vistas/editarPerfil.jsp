@@ -26,7 +26,7 @@
                 </div>
             </c:if>
             <c:if test="${not empty u}">
-                <section class="formulario-contenedor">
+                <section class="formulario-contenedor formulario-contenedor-amplio">
                     <h2 class="formulario-titulo">Editar perfil</h2>
                     
                     <c:if test="${not empty error}">
@@ -35,8 +35,19 @@
                         </div>
                     </c:if>
                     
-                    <form action="${contexto}/GestionUsuario?op=editarPerfil" method="POST" 
+                    <form action="${contexto}/GestionUsuario" method="POST" 
                           class="formulario" enctype="multipart/form-data">
+                        <input type="hidden" name="op" value="editarPerfil">
+                        
+                        <!-- Navegación de pestañas -->
+                        <div class="pestanas-nav">
+                            <button type="button" class="pestana-btn activa" data-tab="perfil">Perfil</button>
+                            <button type="button" class="pestana-btn" data-tab="direccion">Dirección</button>
+                            <button type="button" class="pestana-btn" data-tab="contrasena">Contraseña</button>
+                        </div>
+                        
+                        <!-- Pestaña Perfil -->
+                        <div class="pestana-panel activa" id="tab-perfil">
                         
                         <!-- Avatar -->
                         <div class="formulario-grupo">
@@ -123,8 +134,27 @@
                             <label for="telefono" class="formulario-etiqueta">Teléfono</label>
                             <input type="tel" id="telefono" name="telefono" 
                                    class="formulario-input" value="${u.telefono}" 
-                                   pattern="[0-9]{9}" title="Teléfono de 9 dígitos">
+                                   pattern="[6789][0-9]{8}" maxlength="9"
+                                   title="Teléfono de 9 dígitos que empiece por 6, 7, 8 o 9">
+                            <span class="formulario-feedback" id="telefonoFeedback"></span>
                         </div>
+                        
+                        <!-- Botones pestaña Perfil -->
+                        <div class="formulario-acciones">
+                            <button type="submit" class="boton boton-primario" 
+                                    title="Guardar los cambios">
+                                Modificar
+                            </button>
+                            <a href="${contexto}/FrontController?op=perfil" 
+                               class="boton boton-secundario"
+                               title="Volver al perfil sin guardar">
+                                Cancelar
+                            </a>
+                        </div>
+                        </div>
+                        
+                        <!-- Pestaña Dirección -->
+                        <div class="pestana-panel" id="tab-direccion">
                         
                         <!-- Dirección -->
                         <div class="formulario-grupo">
@@ -158,6 +188,23 @@
                                    class="formulario-input" value="${u.provincia}" 
                                    title="Tu provincia">
                         </div>
+                        
+                        <!-- Botones pestaña Dirección -->
+                        <div class="formulario-acciones">
+                            <button type="submit" class="boton boton-primario" 
+                                    title="Guardar los cambios">
+                                Modificar
+                            </button>
+                            <a href="${contexto}/FrontController?op=perfil" 
+                               class="boton boton-secundario"
+                               title="Volver al perfil sin guardar">
+                                Cancelar
+                            </a>
+                        </div>
+                        </div>
+                        
+                        <!-- Pestaña Contraseña -->
+                        <div class="pestana-panel" id="tab-contrasena">
                         
                         <!-- Cambio de contraseña -->
                         <fieldset class="formulario-fieldset">
@@ -222,17 +269,18 @@
                             </div>
                         </fieldset>
                         
-                        <!-- Botones -->
+                        <!-- Botones pestaña Contraseña -->
                         <div class="formulario-acciones">
                             <button type="submit" class="boton boton-primario" 
                                     title="Guardar los cambios">
-                                Guardar cambios
+                                Modificar
                             </button>
                             <a href="${contexto}/FrontController?op=perfil" 
                                class="boton boton-secundario"
                                title="Volver al perfil sin guardar">
                                 Cancelar
                             </a>
+                        </div>
                         </div>
                     </form>
                 </section>
@@ -243,6 +291,42 @@
         
         <script>
         document.addEventListener("DOMContentLoaded", function() {
+            /* Pestañas */
+            var tabs = document.querySelectorAll(".pestana-btn");
+            var panels = document.querySelectorAll(".pestana-panel");
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].addEventListener("click", function() {
+                    for (var j = 0; j < tabs.length; j++) {
+                        tabs[j].classList.remove("activa");
+                        panels[j].classList.remove("activa");
+                    }
+                    this.classList.add("activa");
+                    document.getElementById("tab-" + this.getAttribute("data-tab")).classList.add("activa");
+                });
+            }
+            
+            /* Validación teléfono */
+            var telInput = document.getElementById("telefono");
+            var telFb = document.getElementById("telefonoFeedback");
+            if (telInput) {
+                telInput.addEventListener("input", function() {
+                    this.value = this.value.replace(/[^0-9]/g, "");
+                    if (this.value.length === 0) {
+                        telFb.textContent = ""; telFb.className = "formulario-feedback";
+                    } else if (!/^[6789]/.test(this.value)) {
+                        telFb.textContent = "\u26A0 Debe empezar por 6, 7, 8 o 9";
+                        telFb.className = "formulario-feedback feedback-invalido";
+                    } else if (this.value.length < 9) {
+                        telFb.textContent = "\u26A0 Debe tener 9 dígitos";
+                        telFb.className = "formulario-feedback feedback-invalido";
+                    } else {
+                        telFb.textContent = "\u2713 Teléfono válido";
+                        telFb.className = "formulario-feedback feedback-valido";
+                    }
+                });
+            }
+            
+            /* Validación contraseña */
             var passNueva = document.getElementById("passwordNueva");
             var passNueva2 = document.getElementById("passwordNueva2");
             var feedback = document.getElementById("passwordNuevaFeedback");

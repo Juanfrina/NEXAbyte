@@ -779,6 +779,10 @@ ul, ol {
     width: 100%;
 }
 
+.formulario-contenedor-amplio {
+    max-width: 750px;
+}
+
 .formulario {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -840,6 +844,46 @@ ul, ol {
 
 .formulario-acciones .boton {
     flex: 1;
+}
+
+/* Pestañas (editar perfil) */
+.pestanas-nav {
+    display: flex;
+    border-bottom: 2px solid var(--accent-primary);
+    margin-bottom: 1.5rem;
+}
+
+.pestana-btn {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    font-family: var(--font-primary);
+}
+
+.pestana-btn:hover {
+    color: var(--text-primary);
+    background: rgba(0, 180, 216, 0.05);
+}
+
+.pestana-btn.activa {
+    color: var(--accent-primary);
+    border-bottom-color: var(--accent-primary);
+}
+
+.pestana-panel {
+    display: none;
+}
+
+.pestana-panel.activa {
+    display: block;
 }
 
 /* Fieldset para agrupación de campos (ej. cambio de contraseña) */
@@ -977,8 +1021,9 @@ ul, ol {
 /* Cabecera del carrito (tipo tabla) */
 .carrito-cabecera {
     display: grid;
-    grid-template-columns: 70px 1fr 100px 120px 100px 50px;
+    grid-template-columns: 40px 70px 1fr 100px 120px 100px 50px;
     gap: 0.5rem;
+    align-items: center;
     padding: 0.8rem 1.2rem;
     background: var(--bg-secondary);
     border-bottom: 1px solid var(--border-color);
@@ -992,7 +1037,7 @@ ul, ol {
 /* Filas del carrito */
 .carrito-item {
     display: grid;
-    grid-template-columns: 70px 1fr 100px 120px 100px 50px;
+    grid-template-columns: 40px 70px 1fr 100px 120px 100px 50px;
     gap: 0.5rem;
     align-items: center;
     padding: 1rem 1.2rem;
@@ -1009,6 +1054,12 @@ ul, ol {
 }
 
 /* Columnas del carrito */
+.carrito-col-id {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
 .carrito-col-img {
     width: 60px;
     height: 60px;
@@ -1073,6 +1124,12 @@ ul, ol {
 
 .carrito-col-accion {
     text-align: center;
+}
+
+/* Variante para vista de pedido (sin columna Acción → 6 columnas) */
+.pedido-tabla .carrito-cabecera,
+.pedido-tabla .carrito-item {
+    grid-template-columns: 40px 70px 1fr 100px 120px 100px;
 }
 
 /* Control de cantidad (+/-) */
@@ -1574,6 +1631,10 @@ ul, ol {
     animation: slideUp 0.25s ease;
 }
 
+.modal-registro-amplio {
+    max-width: 700px;
+}
+
 .modal-form h2 {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -1972,6 +2033,15 @@ ul, ol {
 
 .tabla-pedidos tbody tr:hover {
     background: var(--bg-card-hover);
+}
+
+.tabla-pedidos th:nth-child(3),
+.tabla-pedidos th:nth-child(4),
+.tabla-pedidos th:nth-child(5),
+.tabla-pedidos td:nth-child(3),
+.tabla-pedidos td:nth-child(4),
+.tabla-pedidos td:nth-child(5) {
+    text-align: right;
 }
 
 .pedido-detalle-seccion {

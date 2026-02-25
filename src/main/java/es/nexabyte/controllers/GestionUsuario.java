@@ -336,12 +336,12 @@ public class GestionUsuario extends HttpServlet {
 
         if (exito) {
             sesion.setAttribute("usuario", usuarioSesion);
-            request.setAttribute("mensaje", "Perfil actualizado correctamente.");
+            sesion.setAttribute("mensajeFlash", "Perfil actualizado correctamente.");
+            response.sendRedirect(request.getContextPath() + "/FrontController?op=perfil");
         } else {
             request.setAttribute("error", "No se pudo actualizar el perfil.");
+            request.getRequestDispatcher("/JSP/vistas/editarPerfil.jsp").forward(request, response);
         }
-
-        request.getRequestDispatcher("/JSP/vistas/perfil.jsp").forward(request, response);
     }
 
     /**
