@@ -1,0 +1,64 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-classpath
+'C:/Users/jfco1/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar;C:/Users/jfco1/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar;C:/Users/jfco1/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar;C:/Users/jfco1/.m2/repository/javax/javaee-web-api/7.0/javaee-web-api-7.0.jar;C:/Users/jfco1/.m2/repository/jstl/jstl/1.2/jstl-1.2.jar;C:/Users/jfco1/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar;C:/Users/jfco1/.m2/repository/com/google/protobuf/protobuf-java/3.21.9/protobuf-java-3.21.9.jar;C:/Users/jfco1/.m2/repository/org/json/json/20231013/json-20231013.jar;C:/Users/jfco1/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/jfco1/Documents/NetBeansProjects/NEXAbyte/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2026. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/jfco1/Documents/NetBeansProjects/NEXAbyte/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'NEXAbyte 1.0 API'
+-linkoffline
+'https://docs.oracle.com/javase/7/docs/api' 'C:/Users/jfco1/Documents/NetBeansProjects/NEXAbyte/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'NEXAbyte 1.0 API'
+es.nexabyte.beans
+es.nexabyte.controllers
+es.nexabyte.DAO
+es.nexabyte.DAOFactory
+es.nexabyte.filters
+es.nexabyte.listener
+es.nexabyte.models
+C:\Users\jfco1\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar = 1758015906185
+C:\Users\jfco1\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar = 1745743349238
+C:\Users\jfco1\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar = 1745743349971
+C:\Users\jfco1\.m2\repository\javax\javaee-web-api\7.0\javaee-web-api-7.0.jar = 1758015905960
+C:\Users\jfco1\.m2\repository\jstl\jstl\1.2\jstl-1.2.jar = 1758015906373
+C:\Users\jfco1\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar = 1758015906682
+C:\Users\jfco1\.m2\repository\com\google\protobuf\protobuf-java\3.21.9\protobuf-java-3.21.9.jar = 1758015906671
+C:\Users\jfco1\.m2\repository\org\json\json\20231013\json-20231013.jar = 1758794940304
+C:\Users\jfco1\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar = 1771581742219
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java = 1770287877688
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\allclasses-index.html = 1772104470564
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\allclasses.html = 1772104470577
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\allpackages-index.html = 1772104470568
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\constant-values.html = 1772104470224
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\deprecated-list.html = 1772104470577
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\element-list = 1772104470131
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\help-doc.html = 1772104470588
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\index-all.html = 1772104470545
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\index.html = 1772104470588
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\jquery-ui.overrides.css = 1772104470634
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\member-search-index.js = 1772104470541
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\overview-summary.html = 1772104470588
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\overview-tree.html = 1772104470490
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\package-search-index.js = 1772104470537
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\script.js = 1772104470602
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\search.js = 1772104470607
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\serialized-form.html = 1772104470249
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\stylesheet.css = 1772104470598
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\target\reports\apidocs\type-search-index.js = 1772104470539
