@@ -24,7 +24,7 @@
             <h1 class="error-titulo">ERROR DEL SERVIDOR</h1>
             <p class="error-mensaje">Algo salió mal en nuestro lado. Por favor, inténtelo más tarde.</p>
             <p class="error-disculpa">Disculpa las molestias.</p>
-            <a href="${contexto}/FrontController?op=inicio" class="error-btn" 
+            <a href="${contexto}/" class="error-btn" 
                title="Volver a la página de inicio">
                 Volver al inicio
             </a>

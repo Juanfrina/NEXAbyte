@@ -22,7 +22,7 @@
                 <c:when test="${empty producto}">
                     <div class="carrito-vacio">
                         <p>Producto no encontrado</p>
-                        <a href="${contexto}/FrontController?op=inicio" 
+                        <a href="${contexto}/" 
                            class="boton boton-primario"
                            title="Volver a la lista de productos">
                             Ver productos
@@ -39,7 +39,7 @@
                         </div>
                         <div class="producto-detalle-info">
                             <nav class="producto-breadcrumb">
-                                <a href="${contexto}/FrontController?op=inicio" 
+                                <a href="${contexto}/" 
                                    title="Ir al inicio">Inicio</a> &rsaquo;
                                 <a href="${contexto}/FrontController?op=buscar&categoria=${producto.categoria.idCategoria}" 
                                    title="Ver productos de ${producto.categoria.nombre}">
@@ -76,7 +76,7 @@
                                         title="Añadir ${producto.nombre} al carrito">
                                     &#128722; Añadir al carrito
                                 </button>
-                                <a href="${contexto}/FrontController?op=inicio" 
+                                <a href="${contexto}/" 
                                    class="boton boton-secundario"
                                    title="Volver a la lista de productos">
                                     Seguir comprando

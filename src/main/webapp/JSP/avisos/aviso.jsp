@@ -34,7 +34,7 @@
                     </div>
                 </c:if>
                 <div class="formulario-acciones" style="margin-top:1.5rem;">
-                    <a href="${contexto}/FrontController?op=inicio" 
+                    <a href="${contexto}/" 
                        class="boton boton-primario"
                        title="Volver al inicio">
                         Volver al inicio

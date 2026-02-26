@@ -64,7 +64,7 @@
                     
                     <!-- Botones -->
                     <div class="formulario-acciones">
-                        <a href="${contexto}/FrontController?op=inicio" 
+                        <a href="${contexto}/" 
                            class="boton boton-secundario"
                            title="Volver a la página de inicio">
                             Cancelar

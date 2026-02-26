@@ -24,7 +24,7 @@
             <h1 class="error-titulo">HA OCURRIDO UN ERROR</h1>
             <p class="error-mensaje">Se ha producido un error inesperado. Por favor, inténtelo de nuevo.</p>
             <p class="error-disculpa">Disculpa por las molestias.</p>
-            <a href="${contexto}/FrontController?op=inicio" class="error-btn" 
+            <a href="${contexto}/" class="error-btn" 
                title="Volver a la página de inicio">
                 Volver al inicio
             </a>

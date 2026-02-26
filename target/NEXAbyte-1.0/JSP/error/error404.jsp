@@ -24,7 +24,7 @@
             <h1 class="error-titulo">PÁGINA NO ENCONTRADA</h1>
             <p class="error-mensaje">Lo sentimos, la página que buscas no existe o se ha movido.</p>
             <p class="error-disculpa">Disculpa las molestias.</p>
-            <a href="${contexto}/FrontController?op=inicio" class="error-btn" 
+            <a href="${contexto}/" class="error-btn" 
                title="Volver a la página de inicio">
                 Volver al inicio
             </a>

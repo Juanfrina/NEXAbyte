@@ -10,9 +10,9 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <c:set var="contexto" value="${pageContext.request.contextPath}" scope="application"/>
 
-<%-- Si no hay productos cargados, redirigir al FrontController --%>
-<c:if test="${empty productos}">
-    <c:redirect url="/FrontController?op=inicio"/>
+<%-- Si no hay productos cargados (acceso directo), redirigir al FrontController --%>
+<c:if test="${productos == null}">
+    <jsp:forward page="/FrontController"/>
 </c:if>
 
 <!DOCTYPE html>
@@ -103,7 +103,7 @@
                     <button type="submit" class="btn-buscar" title="Aplicar filtros de búsqueda">
                         Buscar
                     </button>
-                    <a href="${contexto}/FrontController?op=inicio" class="btn-limpiar" 
+                    <a href="${contexto}/" class="btn-limpiar" 
                        title="Eliminar todos los filtros" style="display:block; text-align:center;">
                         Limpiar filtros
                     </a>
@@ -178,7 +178,7 @@
                             <div class="sin-resultados">
                                 <span class="icono-grande">&#128270;</span>
                                 <p>No se han encontrado productos con los filtros seleccionados.</p>
-                                <a href="${contexto}/FrontController?op=inicio" class="error-btn" 
+                                <a href="${contexto}/" class="error-btn" 
                                    title="Ver todos los productos" style="margin-top:1rem; display:inline-block;">
                                     Ver todos los productos
                                 </a>

@@ -1,7 +1,7 @@
 <header class="cabecera">
     <div class="cabecera-contenido">
         <%-- Logo --%>
-        <a href="${contexto}/FrontController?op=inicio" class="logo" title="Ir al inicio de NEXAbyte">
+        <a href="${contexto}/" class="logo" title="Ir al inicio de NEXAbyte">
             <img src="${contexto}/IMG/Logo.jpg" alt="NEXAbyte - Tienda de componentes" title="NEXAbyte">
         </a>
 

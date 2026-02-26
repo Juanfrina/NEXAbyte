@@ -33,7 +33,7 @@
                         <c:when test="${empty pedidos}">
                             <div class="carrito-vacio">
                                 <p>Aún no has realizado ningún pedido.</p>
-                                <a href="${contexto}/FrontController?op=inicio" 
+                                <a href="${contexto}/" 
                                    class="boton boton-primario"
                                    title="Ver productos disponibles">
                                     Ver productos

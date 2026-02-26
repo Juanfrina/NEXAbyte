@@ -37,7 +37,7 @@
                         <div class="carrito-vacio">
                             <span class="carrito-vacio-icono">&#128722;</span>
                             <p>Tu carrito está vacío</p>
-                            <a href="${contexto}/FrontController?op=inicio" 
+                            <a href="${contexto}/" 
                                class="boton boton-primario"
                                title="Ver productos disponibles">
                                 Ver productos
@@ -132,7 +132,7 @@
                                 <span><fmt:formatNumber value="${baseImponible * 1.21}" type="currency" currencySymbol="€" maxFractionDigits="2"/></span>
                             </div>
                             <div class="carrito-resumen-acciones">
-                                <a href="${contexto}/FrontController?op=inicio" 
+                                <a href="${contexto}/" 
                                    class="boton boton-secundario"
                                    title="Volver a la tienda">
                                     Seguir comprando
@@ -336,7 +336,7 @@
                     vacio.className = "carrito-vacio";
                     vacio.innerHTML = '<span class="carrito-vacio-icono">&#128722;</span>' +
                         '<p>Tu carrito está vacío</p>' +
-                        '<a href="' + contexto + '/FrontController?op=inicio" ' +
+                        '<a href="' + contexto + '/" ' +
                         'class="boton boton-primario" title="Ver productos disponibles">Ver productos</a>';
                     seccion.appendChild(vacio);
                 }

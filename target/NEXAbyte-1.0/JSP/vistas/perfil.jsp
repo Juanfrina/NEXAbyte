@@ -110,7 +110,7 @@
                                title="Ver mi historial de pedidos">
                                 Ver mis pedidos
                             </a>
-                            <a href="${contexto}/FrontController?op=inicio" 
+                            <a href="${contexto}/" 
                                class="boton boton-terciario"
                                title="Volver a la tienda">
                                 &#128722; Seguir comprando

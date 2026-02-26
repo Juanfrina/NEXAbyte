@@ -153,7 +153,7 @@ public class GestionPedido extends HttpServlet {
 
         if (idProducto == null) {
             if (esAjax) { response.setStatus(400); return; }
-            response.sendRedirect(request.getContextPath() + "/FrontController?op=inicio");
+            response.sendRedirect(request.getContextPath() + "/");
             return;
         }
 

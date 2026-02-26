@@ -216,11 +216,11 @@ public class GestionUsuario extends HttpServlet {
             enviarJsonRespuesta(response, "ok", null);
             return;
         }
-        response.sendRedirect(request.getContextPath() + "/FrontController?op=inicio");
+        response.sendRedirect(request.getContextPath() + "/");
     }
 
     /**
-     * Cierra la sesión del usuario e invalida la sesión HTTP.
+     * Cierra la sesión del usuario y redirige al inicio.
      *
      * @param request la petición HTTP.
      * @param response la respuesta HTTP.
@@ -232,7 +232,7 @@ public class GestionUsuario extends HttpServlet {
         if (sesion != null) {
             sesion.invalidate();
         }
-        response.sendRedirect(request.getContextPath() + "/FrontController?op=inicio");
+        response.sendRedirect(request.getContextPath() + "/");
     }
 
     /**
