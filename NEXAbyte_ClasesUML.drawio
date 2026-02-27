@@ -1,0 +1,332 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
+  <diagram id="nexabyte-uml" name="NEXAbyte — Diagrama de Clases UML">
+    <mxGraphModel dx="4270" dy="2087" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="4000" pageHeight="3200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="titulo" parent="1" style="text;html=1;fontSize=22;fontFamily=Helvetica;align=center;verticalAlign=middle;" value="&lt;b&gt;NEXAbyte — Diagrama de Clases UML&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="600" x="1200" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="leyenda_box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;" value="" vertex="1">
+          <mxGeometry height="250" width="260" x="10" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="leyenda_titulo" parent="1" style="text;html=1;fontSize=12;fontFamily=Helvetica;align=center;" value="&lt;b&gt;LEYENDA&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="260" x="10" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_beans" parent="1" style="rounded=0;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;" value="" vertex="1">
+          <mxGeometry height="16" width="20" x="25" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_beans_t" parent="1" style="text;html=1;fontSize=10;align=left;" value="Beans (Entidades)" vertex="1">
+          <mxGeometry height="20" width="200" x="55" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_iface" parent="1" style="rounded=0;whiteSpace=wrap;fillColor=#E1D5E7;strokeColor=#9673A6;" value="" vertex="1">
+          <mxGeometry height="16" width="20" x="25" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_iface_t" parent="1" style="text;html=1;fontSize=10;align=left;" value="Interfaces DAO" vertex="1">
+          <mxGeometry height="20" width="200" x="55" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_dao" parent="1" style="rounded=0;whiteSpace=wrap;fillColor=#DAE8FC;strokeColor=#6C8EBF;" value="" vertex="1">
+          <mxGeometry height="16" width="20" x="25" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_dao_t" parent="1" style="text;html=1;fontSize=10;align=left;" value="Implementaciones DAO" vertex="1">
+          <mxGeometry height="20" width="200" x="55" y="93" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_ctrl" parent="1" style="rounded=0;whiteSpace=wrap;fillColor=#D5E8D4;strokeColor=#82B366;" value="" vertex="1">
+          <mxGeometry height="16" width="20" x="25" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_ctrl_t" parent="1" style="text;html=1;fontSize=10;align=left;" value="Controladores (Servlets)" vertex="1">
+          <mxGeometry height="20" width="200" x="55" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_svc" parent="1" style="rounded=0;whiteSpace=wrap;fillColor=#F8CECC;strokeColor=#B85450;" value="" vertex="1">
+          <mxGeometry height="16" width="20" x="25" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_svc_t" parent="1" style="text;html=1;fontSize=10;align=left;" value="Servicios (Models)" vertex="1">
+          <mxGeometry height="20" width="200" x="55" y="143" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_util" parent="1" style="rounded=0;whiteSpace=wrap;fillColor=#EEEEEE;strokeColor=#999999;" value="" vertex="1">
+          <mxGeometry height="16" width="20" x="25" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_util_t" parent="1" style="text;html=1;fontSize=10;align=left;" value="Utilidades / Infraestructura" vertex="1">
+          <mxGeometry height="20" width="200" x="55" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_line1" edge="1" parent="1" style="endArrow=block;endFill=0;strokeWidth=1.5;dashed=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="25" y="205" as="sourcePoint" />
+            <mxPoint x="75" y="205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ley_line1_t" parent="1" style="text;html=1;fontSize=10;align=left;" value="Herencia (extends)" vertex="1">
+          <mxGeometry height="20" width="160" x="85" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_line2" edge="1" parent="1" style="endArrow=block;endFill=0;strokeWidth=1.5;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="25" y="230" as="sourcePoint" />
+            <mxPoint x="75" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ley_line2_t" parent="1" style="text;html=1;fontSize=10;align=left;" value="Implementación (implements)" vertex="1">
+          <mxGeometry height="20" width="180" x="85" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_beans" parent="1" style="shape=folder;fontStyle=1;tabWidth=180;tabHeight=22;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=13;verticalAlign=top;spacingTop=5;" value="&lt;b&gt;es.nexabyte.beans&lt;/b&gt;" vertex="1">
+          <mxGeometry height="640" width="1040" x="60" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="Categoria" parent="pkg_beans" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;Categoria&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;- idCategoria : Byte&lt;br&gt;- nombre : String&lt;br&gt;- imagen : String&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ getIdCategoria() : Byte&lt;br&gt;+ setIdCategoria(Byte)&lt;br&gt;+ getNombre() : String&lt;br&gt;+ setNombre(String)&lt;br&gt;+ getImagen() : String&lt;br&gt;+ setImagen(String)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="220" x="30" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Producto" parent="pkg_beans" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;Producto&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;- idProducto : Short&lt;br&gt;- categoria : Categoria&lt;br&gt;- nombre : String&lt;br&gt;- descripcion : String&lt;br&gt;- precio : Double&lt;br&gt;- marca : String&lt;br&gt;- imagen : String&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ getIdProducto() : Short&lt;br&gt;+ setIdProducto(Short)&lt;br&gt;+ getCategoria() : Categoria&lt;br&gt;+ setCategoria(Categoria)&lt;br&gt;+ getNombre() : String&lt;br&gt;+ setNombre(String)&lt;br&gt;+ getDescripcion() : String&lt;br&gt;+ setDescripcion(String)&lt;br&gt;+ getPrecio() : Double&lt;br&gt;+ setPrecio(Double)&lt;br&gt;+ getMarca() : String&lt;br&gt;+ setMarca(String)&lt;br&gt;+ getImagen() : String&lt;br&gt;+ setImagen(String)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="380" width="230" x="290" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Usuario" parent="pkg_beans" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;Usuario&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;- idUsuario : Short&lt;br&gt;- email : String&lt;br&gt;- password : String&lt;br&gt;- nombre : String&lt;br&gt;- apellidos : String&lt;br&gt;- nif : String&lt;br&gt;- telefono : String&lt;br&gt;- direccion : String&lt;br&gt;- codigoPostal : String&lt;br&gt;- localidad : String&lt;br&gt;- provincia : String&lt;br&gt;- ultimoAcceso : Timestamp&lt;br&gt;- avatar : String&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ getters / setters&lt;br&gt;  (13 campos)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="370" width="220" x="560" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Pedido" parent="pkg_beans" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;Pedido&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;- idPedido : Short&lt;br&gt;- fecha : Date&lt;br&gt;- estado : Estado&lt;br&gt;- usuario : Usuario&lt;br&gt;- importe : Double&lt;br&gt;- iva : Double&lt;br&gt;- lineasPedidos : List&amp;lt;LineaPedido&amp;gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ getters / setters&lt;br&gt;  (7 campos)&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:10px;color:#666;&#39;&gt;&amp;laquo;enum&amp;raquo; Estado { c, f }&lt;/div&gt;" vertex="1">
+          <mxGeometry height="260" width="200" x="820" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="LineaPedido" parent="pkg_beans" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;LineaPedido&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;- idLinea : Short&lt;br&gt;- pedido : Pedido&lt;br&gt;- producto : Producto&lt;br&gt;- cantidad : Integer&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ getIdLinea() : Short&lt;br&gt;+ setIdLinea(Short)&lt;br&gt;+ getPedido() : Pedido&lt;br&gt;+ setPedido(Pedido)&lt;br&gt;+ getProducto() : Producto&lt;br&gt;+ setProducto(Producto)&lt;br&gt;+ getCantidad() : Integer&lt;br&gt;+ setCantidad(Integer)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="260" width="200" x="820" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_prod_cat" edge="1" parent="pkg_beans" source="Producto" style="endArrow=diamondThin;endFill=1;endSize=14;strokeWidth=1.5;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="Categoria">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_prod_cat_label" parent="pkg_beans" style="text;html=1;fontSize=10;align=center;" value="1" vertex="1">
+          <mxGeometry height="16" width="20" x="260" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_ped_usr" edge="1" parent="pkg_beans" source="Pedido" style="endArrow=open;endFill=0;endSize=10;strokeWidth=1.5;exitX=0;exitY=0.3;exitDx=0;exitDy=0;entryX=1;entryY=0.7;entryDx=0;entryDy=0;" target="Usuario">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_ped_usr_s" parent="pkg_beans" style="text;html=1;fontSize=10;" value="*" vertex="1">
+          <mxGeometry height="16" width="16" x="800" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_ped_usr_t" parent="pkg_beans" style="text;html=1;fontSize=10;" value="1" vertex="1">
+          <mxGeometry height="16" width="16" x="783" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_ped_lp" edge="1" parent="pkg_beans" source="LineaPedido" style="endArrow=diamondThin;endFill=1;endSize=14;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="Pedido">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_ped_lp_s" parent="pkg_beans" style="text;html=1;fontSize=10;" value="0..*" vertex="1">
+          <mxGeometry height="16" width="30" x="930" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_lp_prod" edge="1" parent="pkg_beans" source="LineaPedido" style="endArrow=open;endFill=0;endSize=10;strokeWidth=1.5;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="Producto">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="405" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_lp_prod_s" parent="pkg_beans" style="text;html=1;fontSize=10;" value="*" vertex="1">
+          <mxGeometry height="16" width="16" x="800" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_lp_prod_t" parent="pkg_beans" style="text;html=1;fontSize=10;" value="1" vertex="1">
+          <mxGeometry height="16" width="16" x="410" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_dao_iface" parent="1" style="shape=folder;fontStyle=1;tabWidth=220;tabHeight=22;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=13;verticalAlign=top;spacingTop=5;" value="&lt;b&gt;es.nexabyte.DAO&lt;/b&gt; (interfaces)" vertex="1">
+          <mxGeometry height="310" width="1530" x="60" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="ICategoriaDAO" parent="pkg_dao_iface" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;&amp;laquo;interface&amp;raquo;&lt;br&gt;ICategoriaDAO&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ obtenerTodas() : List&amp;lt;Categoria&amp;gt;&lt;br&gt;+ obtenerPorId(Byte) : Categoria&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="260" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="IProductoDAO" parent="pkg_dao_iface" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;&amp;laquo;interface&amp;raquo;&lt;br&gt;IProductoDAO&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ obtenerTodos() : List&amp;lt;Producto&amp;gt;&lt;br&gt;+ obtenerAleatorios(int) : List&amp;lt;Producto&amp;gt;&lt;br&gt;+ obtenerPorId(Short) : Producto&lt;br&gt;+ obtenerPorCategoria(Byte) : List&amp;lt;Producto&amp;gt;&lt;br&gt;+ buscar(String, Byte, String, Double, Double) : List&amp;lt;Producto&amp;gt;&lt;br&gt;+ obtenerMarcas() : List&amp;lt;String&amp;gt;&lt;br&gt;+ obtenerPrecioMaximo() : Double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="340" x="310" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="IUsuarioDAO" parent="pkg_dao_iface" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;&amp;laquo;interface&amp;raquo;&lt;br&gt;IUsuarioDAO&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ insertar(Usuario) : boolean&lt;br&gt;+ obtenerPorEmail(String) : Usuario&lt;br&gt;+ existeEmail(String) : boolean&lt;br&gt;+ validarCredenciales(String, String) : Usuario&lt;br&gt;+ actualizar(Usuario) : boolean&lt;br&gt;+ actualizarUltimoAcceso(Short)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="290" x="680" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="IPedidoDAO" parent="pkg_dao_iface" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;&amp;laquo;interface&amp;raquo;&lt;br&gt;IPedidoDAO&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ insertar(Pedido) : Short&lt;br&gt;+ obtenerCarrito(Short) : Pedido&lt;br&gt;+ obtenerFinalizados(Short) : List&amp;lt;Pedido&amp;gt;&lt;br&gt;+ finalizar(Short) : boolean&lt;br&gt;+ actualizarImportes(Short) : boolean&lt;br&gt;+ eliminar(Short) : boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="260" x="1000" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ILineaPedidoDAO" parent="pkg_dao_iface" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;&amp;laquo;interface&amp;raquo;&lt;br&gt;ILineaPedidoDAO&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ insertar(LineaPedido) : boolean&lt;br&gt;+ obtenerPorPedido(Short) : List&amp;lt;LineaPedido&amp;gt;&lt;br&gt;+ actualizarCantidad(Short, Integer) : boolean&lt;br&gt;+ eliminar(Short) : boolean&lt;br&gt;+ eliminarPorPedido(Short) : boolean&lt;br&gt;+ buscarPorPedidoYProducto(Short, Short) : LineaPedido&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="220" x="1290" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_dao_impl" parent="1" style="shape=folder;fontStyle=1;tabWidth=260;tabHeight=22;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=13;verticalAlign=top;spacingTop=5;" value="&lt;b&gt;es.nexabyte.DAO&lt;/b&gt; (implementaciones)" vertex="1">
+          <mxGeometry height="280" width="1530" x="60" y="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="ConnectionFactory" parent="pkg_dao_impl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;ConnectionFactory&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;- dataSource : DataSource {static}&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ getConnection() : Connection {static}&lt;br&gt;+ closeConnection(Connection) {static}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="260" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CategoriaDAO" parent="pkg_dao_impl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;CategoriaDAO&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ obtenerTodas() : List&amp;lt;Categoria&amp;gt;&lt;br&gt;+ obtenerPorId(Byte) : Categoria&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75" width="260" x="20" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="ProductoDAO" parent="pkg_dao_impl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;ProductoDAO&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;- SQL_BASE : String {static final}&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;- mapearProducto(ResultSet) : Producto&lt;br&gt;+ obtenerTodos() : List&amp;lt;Producto&amp;gt;&lt;br&gt;+ obtenerAleatorios(int) : List&amp;lt;Producto&amp;gt;&lt;br&gt;+ obtenerPorId(Short) : Producto&lt;br&gt;+ obtenerPorCategoria(Byte) : List&amp;lt;Producto&amp;gt;&lt;br&gt;+ buscar(...) : List&amp;lt;Producto&amp;gt;&lt;br&gt;+ obtenerMarcas() : List&amp;lt;String&amp;gt;&lt;br&gt;+ obtenerPrecioMaximo() : Double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="260" x="310" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UsuarioDAO" parent="pkg_dao_impl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;UsuarioDAO&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;- mapearUsuario(ResultSet) : Usuario&lt;br&gt;+ insertar(Usuario) : boolean&lt;br&gt;+ obtenerPorEmail(String) : Usuario&lt;br&gt;+ existeEmail(String) : boolean&lt;br&gt;+ validarCredenciales(String, String) : Usuario&lt;br&gt;+ actualizar(Usuario) : boolean&lt;br&gt;+ actualizarUltimoAcceso(Short)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="280" x="600" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PedidoDAO" parent="pkg_dao_impl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;PedidoDAO&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;- mapearPedido(ResultSet) : Pedido&lt;br&gt;+ insertar(Pedido) : Short&lt;br&gt;+ obtenerCarrito(Short) : Pedido&lt;br&gt;+ obtenerFinalizados(Short) : List&amp;lt;Pedido&amp;gt;&lt;br&gt;+ finalizar(Short) : boolean&lt;br&gt;+ actualizarImportes(Short) : boolean&lt;br&gt;+ eliminar(Short) : boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="260" x="910" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="LineaPedidoDAO" parent="pkg_dao_impl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;LineaPedidoDAO&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ insertar(LineaPedido) : boolean&lt;br&gt;+ obtenerPorPedido(Short) : List&amp;lt;LineaPedido&amp;gt;&lt;br&gt;+ actualizarCantidad(Short, Integer) : boolean&lt;br&gt;+ eliminar(Short) : boolean&lt;br&gt;+ eliminarPorPedido(Short) : boolean&lt;br&gt;+ buscarPorPedidoYProducto(Short, Short) : LineaPedido&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="300" x="1200" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="impl_cat" edge="1" parent="1" source="CategoriaDAO" style="endArrow=block;endFill=0;strokeWidth=1.5;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="ICategoriaDAO">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="1595" as="sourcePoint" />
+            <mxPoint x="210" y="1330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="impl_prod" edge="1" parent="1" source="ProductoDAO" style="endArrow=block;endFill=0;strokeWidth=1.5;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="IProductoDAO">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="impl_usr" edge="1" parent="1" source="UsuarioDAO" style="endArrow=block;endFill=0;strokeWidth=1.5;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="IUsuarioDAO">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="impl_ped" edge="1" parent="1" source="PedidoDAO" style="endArrow=block;endFill=0;strokeWidth=1.5;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="IPedidoDAO">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="impl_lp" edge="1" parent="1" source="LineaPedidoDAO" style="endArrow=block;endFill=0;strokeWidth=1.5;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="ILineaPedidoDAO">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_factory" parent="1" style="shape=folder;fontStyle=1;tabWidth=200;tabHeight=22;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;fillColor=#EEEEEE;strokeColor=#999999;fontSize=13;verticalAlign=top;spacingTop=5;" value="&lt;b&gt;es.nexabyte.DAOFactory&lt;/b&gt;" vertex="1">
+          <mxGeometry height="200" width="390" x="1200" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="DAOFactory" parent="pkg_factory" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EEEEEE;strokeColor=#999999;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;DAOFactory&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ getCategoriaDAO() : ICategoriaDAO {static}&lt;br&gt;+ getProductoDAO() : IProductoDAO {static}&lt;br&gt;+ getUsuarioDAO() : IUsuarioDAO {static}&lt;br&gt;+ getPedidoDAO() : IPedidoDAO {static}&lt;br&gt;+ getLineaPedidoDAO() : ILineaPedidoDAO {static}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="330" x="30" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_factory_dao" edge="1" parent="1" source="DAOFactory" style="endArrow=open;endFill=0;endSize=10;strokeWidth=1;dashed=1;strokeColor=#999999;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.841;entryY=0.057;entryDx=0;entryDy=0;entryPerimeter=0;" target="pkg_dao_iface">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_factory_label" parent="1" style="text;html=1;fontSize=10;fontColor=#999999;align=center;" value="&lt;i&gt;&amp;laquo;crea&amp;raquo;&lt;/i&gt;" vertex="1">
+          <mxGeometry height="16" width="60" x="1400" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_ctrl" parent="1" style="shape=folder;fontStyle=1;tabWidth=210;tabHeight=22;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=13;verticalAlign=top;spacingTop=5;" value="&lt;b&gt;es.nexabyte.controllers&lt;/b&gt;" vertex="1">
+          <mxGeometry height="640" width="1360" x="1700" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="HttpServlet" parent="pkg_ctrl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;verticalAlign=top;align=center;fontSize=12;fontColor=#333333;dashed=1;" value="&lt;b&gt;&amp;laquo;abstract&amp;raquo;&lt;br&gt;HttpServlet&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:10px;color:#888;&#39;&gt;javax.servlet.http&lt;/div&gt;" vertex="1">
+          <mxGeometry height="65" width="180" x="510" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="FrontController" parent="pkg_ctrl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;@WebServlet(&quot;/FrontController&quot;)&lt;br&gt;FrontController&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;- carritoService : CarritoService&lt;br&gt;- pedidoService : PedidoService&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;# doGet(req, resp)&lt;br&gt;# doPost(req, resp)&lt;br&gt;- cargarInicio(req) : String&lt;br&gt;- buscarProductos(req) : String&lt;br&gt;- verProducto(req) : String&lt;br&gt;- verCarrito(req) : String&lt;br&gt;- verPedidos(req) : String&lt;br&gt;- verDetallePedido(req) : String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="260" width="260" x="20" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="GestionUsuario" parent="pkg_ctrl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;@WebServlet(&quot;/GestionUsuario&quot;)&lt;br&gt;@MultipartConfig&lt;br&gt;GestionUsuario&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;- usuarioService : UsuarioService&lt;br&gt;- carritoService : CarritoService&lt;br&gt;- MAX_AVATAR_SIZE : long {static}&lt;br&gt;- TIPOS_PERMITIDOS : String[] {static}&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;# doGet(req, resp)&lt;br&gt;# doPost(req, resp)&lt;br&gt;- formAcceder(req, resp)&lt;br&gt;- comprobarEmail(req, resp)&lt;br&gt;- acceder(req, resp)&lt;br&gt;- salir(req, resp)&lt;br&gt;- editarPerfil(req, resp)&lt;br&gt;- enviarJsonRespuesta(resp, String, String)&lt;br&gt;- procesarAvatar(req) : String&lt;br&gt;- obtenerExtension(Part) : String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="350" width="290" x="310" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="GestionPedido" parent="pkg_ctrl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;@WebServlet(&quot;/GestionPedido&quot;)&lt;br&gt;GestionPedido&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;- carritoService : CarritoService&lt;br&gt;- pedidoService : PedidoService&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;# doGet(req, resp)&lt;br&gt;# doPost(req, resp)&lt;br&gt;- verCarrito(req, resp)&lt;br&gt;- anadir(req, resp)&lt;br&gt;- aumentar(req, resp)&lt;br&gt;- disminuir(req, resp)&lt;br&gt;- actualizarCantidad(req, resp, int)&lt;br&gt;- eliminar(req, resp)&lt;br&gt;- vaciar(req, resp)&lt;br&gt;- finalizar(req, resp)&lt;br&gt;- parsearIdProducto(String) : Short&lt;/div&gt;" vertex="1">
+          <mxGeometry height="330" width="260" x="630" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="RegistroController" parent="pkg_ctrl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;@WebServlet(&quot;/RegistroController&quot;)&lt;br&gt;@MultipartConfig&lt;br&gt;RegistroController&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;- usuarioService : UsuarioService&lt;br&gt;- MAX_AVATAR_SIZE : long {static}&lt;br&gt;- TIPOS_PERMITIDOS : String[] {static}&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;# doGet(req, resp)&lt;br&gt;# doPost(req, resp)&lt;br&gt;- responderAjax(resp, String)&lt;br&gt;- procesarAvatar(req) : String&lt;br&gt;- obtenerExtension(Part) : String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="280" width="260" x="920" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="VolverController" parent="pkg_ctrl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;@WebServlet(&quot;/VolverController&quot;)&lt;br&gt;VolverController&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;# doGet(req, resp)&lt;br&gt;# doPost(req, resp)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="130" x="1210" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Ajax" parent="pkg_ctrl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;@WebServlet(&quot;/Ajax&quot;)&lt;br&gt;Ajax&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;# doGet(req, resp)&lt;br&gt;# doPost(req, resp)&lt;br&gt;- letraNif(req, resp)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="130" x="1210" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_fc" edge="1" parent="pkg_ctrl" source="FrontController" style="endArrow=block;endFill=0;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="HttpServlet">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="130" />
+              <mxPoint x="150" y="73" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ext_gu" edge="1" parent="pkg_ctrl" source="GestionUsuario" style="endArrow=block;endFill=0;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.3;entryY=1;entryDx=0;entryDy=0;" target="HttpServlet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_gp" edge="1" parent="pkg_ctrl" source="GestionPedido" style="endArrow=block;endFill=0;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.7;entryY=1;entryDx=0;entryDy=0;" target="HttpServlet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_rc" edge="1" parent="pkg_ctrl" source="RegistroController" style="endArrow=block;endFill=0;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="HttpServlet">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1050" y="130" />
+              <mxPoint x="1050" y="73" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ext_vc" edge="1" parent="pkg_ctrl" source="VolverController" style="endArrow=block;endFill=0;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="HttpServlet">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1275" y="130" />
+              <mxPoint x="1100" y="130" />
+              <mxPoint x="690" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ext_aj" edge="1" parent="pkg_ctrl" source="Ajax" style="endArrow=block;endFill=0;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" target="HttpServlet">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1275" y="280" />
+              <mxPoint x="1100" y="140" />
+              <mxPoint x="690" y="105" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pkg_models" parent="1" style="shape=folder;fontStyle=1;tabWidth=180;tabHeight=22;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;fillColor=#F8CECC;strokeColor=#B85450;fontSize=13;verticalAlign=top;spacingTop=5;" value="&lt;b&gt;es.nexabyte.models&lt;/b&gt;" vertex="1">
+          <mxGeometry height="400" width="1360" x="1700" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="CarritoService" parent="pkg_models" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;CarritoService&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ anadirBD(Usuario, Short)&lt;br&gt;+ contarArticulosBD(Usuario) : int&lt;br&gt;+ obtenerLineasBD(Usuario) : List&amp;lt;LineaPedido&amp;gt;&lt;br&gt;+ actualizarCantidadBD(Usuario, Short, int)&lt;br&gt;+ eliminarProductoBD(Usuario, Short)&lt;br&gt;+ vaciarBD(Usuario)&lt;br&gt;+ anadirCookieYContar(req, resp, Short) : int&lt;br&gt;+ actualizarCantidadCookie(req, resp, Short, int) : int&lt;br&gt;+ eliminarProductoCookie(req, resp, Short) : int&lt;br&gt;+ vaciarCookie(req, resp)&lt;br&gt;+ obtenerLineasDesdeCookie(req) : List&amp;lt;LineaPedido&amp;gt;&lt;br&gt;+ transferirCookieABD(req, resp, Usuario)&lt;br&gt;+ contarArticulos(List&amp;lt;LineaPedido&amp;gt;) : int&lt;br&gt;+ contarArticulosCookie(req) : int&lt;br&gt;- obtenerCookieCarrito(req) : String&lt;br&gt;- parsearCookie(String) : List&amp;lt;int[]&amp;gt;&lt;br&gt;- guardarCookieCarrito(resp, req, List&amp;lt;int[]&amp;gt;)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="330" width="330" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PedidoService" parent="pkg_models" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;PedidoService&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ finalizar(Usuario) : boolean&lt;br&gt;+ obtenerFinalizados(Usuario) : List&amp;lt;Pedido&amp;gt;&lt;br&gt;+ obtenerDetallePedido(Usuario, Short) : Pedido&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="280" x="380" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UsuarioService" parent="pkg_models" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;UsuarioService&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ autenticar(String, String) : Usuario&lt;br&gt;+ registrarUltimoAcceso(Short)&lt;br&gt;+ existeEmail(String) : boolean&lt;br&gt;+ actualizarPerfil(Usuario, String) : boolean&lt;br&gt;+ registrar(Usuario) : boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="260" x="690" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SecurityUtils" parent="pkg_models" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;SecurityUtils&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ encriptarMD5(String) : String {static}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="65" width="260" x="690" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="Utils" parent="pkg_models" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;Utils&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ IVA_PORCENTAJE : double = 21.0 {static}&lt;br&gt;+ COOKIE_CARRITO : String {static}&lt;br&gt;+ COOKIE_DURACION : int {static}&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ calcularLetraNIF(String) : String {static}&lt;br&gt;+ calcularIVA(double) : double {static}&lt;br&gt;+ calcularTotal(double) : double {static}&lt;br&gt;+ validarCodigoPostal(String) : boolean {static}&lt;br&gt;+ esVacio(String) : boolean {static}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="280" x="980" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="EnumConverter" parent="pkg_models" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;EnumConverter&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ convert(Class, Object) : Object&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:10px;color:#888;&#39;&gt;implements Converter&lt;br&gt;(commons-beanutils)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="95" width="210" x="980" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_filters" parent="1" style="shape=folder;fontStyle=1;tabWidth=180;tabHeight=22;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;fillColor=#EEEEEE;strokeColor=#999999;fontSize=13;verticalAlign=top;spacingTop=5;" value="&lt;b&gt;es.nexabyte.filters&lt;/b&gt;" vertex="1">
+          <mxGeometry height="140" width="350" x="1700" y="1480" as="geometry" />
+        </mxCell>
+        <mxCell id="AUTF8" parent="pkg_filters" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EEEEEE;strokeColor=#999999;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;@WebFilter(&quot;/*&quot;)&lt;br&gt;AUTF8&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ init(FilterConfig)&lt;br&gt;+ doFilter(req, resp, chain)&lt;br&gt;+ destroy()&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:10px;color:#888;&#39;&gt;implements Filter&lt;/div&gt;" vertex="1">
+          <mxGeometry height="85" width="280" x="30" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_listener" parent="1" style="shape=folder;fontStyle=1;tabWidth=180;tabHeight=22;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;fillColor=#EEEEEE;strokeColor=#999999;fontSize=13;verticalAlign=top;spacingTop=5;" value="&lt;b&gt;es.nexabyte.listener&lt;/b&gt;" vertex="1">
+          <mxGeometry height="140" width="390" x="2120" y="1480" as="geometry" />
+        </mxCell>
+        <mxCell id="SessionListener" parent="pkg_listener" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EEEEEE;strokeColor=#999999;verticalAlign=top;align=center;overflow=auto;fontSize=12;" value="&lt;b&gt;@WebListener&lt;br&gt;SessionListener&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:11px;&#39;&gt;+ contextInitialized(ServletContextEvent)&lt;br&gt;+ contextDestroyed(ServletContextEvent)&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;font-size:10px;color:#888;&#39;&gt;implements ServletContextListener&lt;/div&gt;" vertex="1">
+          <mxGeometry height="85" width="330" x="30" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_fc_cs" edge="1" parent="1" source="FrontController" style="endArrow=open;endFill=0;endSize=8;strokeWidth=1;dashed=1;strokeColor=#82B366;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" target="pkg_models">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1870" y="960" />
+              <mxPoint x="1970" y="1020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dep_fc_cs_l" parent="1" style="text;html=1;fontSize=9;fontColor=#82B366;" value="&lt;i&gt;&amp;laquo;usa&amp;raquo;&lt;/i&gt;" vertex="1">
+          <mxGeometry height="14" width="50" x="1850" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_gu_svc" edge="1" parent="1" source="GestionUsuario" style="endArrow=open;endFill=0;endSize=8;strokeWidth=1;dashed=1;strokeColor=#82B366;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pkg_models">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_gp_svc" edge="1" parent="1" source="GestionPedido" style="endArrow=open;endFill=0;endSize=8;strokeWidth=1;dashed=1;strokeColor=#82B366;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.6;entryY=0;entryDx=0;entryDy=0;" target="pkg_models">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_rc_svc" edge="1" parent="1" source="RegistroController" style="endArrow=open;endFill=0;endSize=8;strokeWidth=1;dashed=1;strokeColor=#82B366;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" target="pkg_models">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_svc_factory" edge="1" parent="1" source="pkg_models" style="endArrow=open;endFill=0;endSize=8;strokeWidth=1;dashed=1;strokeColor=#B85450;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=390;entryDy=200;entryPerimeter=0;" target="pkg_factory">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1600" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dep_svc_factory_l" parent="1" style="text;html=1;fontSize=9;fontColor=#B85450;" value="&lt;i&gt;&amp;laquo;usa&amp;raquo;&lt;/i&gt;" vertex="1">
+          <mxGeometry height="14" width="50" x="1620" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_fc_factory" edge="1" parent="1" source="FrontController" style="endArrow=open;endFill=0;endSize=8;strokeWidth=1;dashed=1;strokeColor=#82B366;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.001;entryY=0.215;entryDx=0;entryDy=0;entryPerimeter=0;" target="pkg_factory">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1660" y="560" />
+              <mxPoint x="1620" y="363" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note_serial" parent="1" style="shape=note;strokeColor=#D6B656;fillColor=#FFF9E6;size=14;html=1;fontSize=11;align=center;whiteSpace=wrap;" value="&lt;i&gt;Todos los beans&lt;br&gt;implements Serializable&lt;/i&gt;" vertex="1">
+          <mxGeometry height="40" width="170" x="350" y="280" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

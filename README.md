@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="src/main/webapp/IMG/imagen/categorias/NEXAbyte_logo.png" alt="NEXAbyte Logo" width="260"/>
+  <img src="src/main/webapp/IMG/imagen/Logo.jpg" alt="NEXAbyte Logo" width="260"/>
 </p>
 
 <h1 align="center">NEXAbyte — Tienda Online de Componentes Informáticos</h1>

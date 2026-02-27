@@ -1,0 +1,169 @@
+<mxfile host="draw.io" agent="draw.io" version="26.2.15">
+  <diagram id="nexabyte-er" name="NEXAbyte - Modelo Relacional">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- TITULO -->
+        <mxCell id="titulo" value="&lt;b&gt;NEXAbyte - Modelo Relacional de la Base de Datos&lt;/b&gt;" style="text;html=1;fontSize=20;fontFamily=Helvetica;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="400" y="15" width="800" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- LEYENDA -->
+        <mxCell id="leyenda" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="15" width="230" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_tit" value="&lt;b&gt;LEYENDA&lt;/b&gt;" style="text;html=1;fontSize=11;align=center;" parent="1" vertex="1">
+          <mxGeometry x="20" y="18" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_pk_icon" value="PK" style="text;html=1;fontSize=10;fontStyle=1;fontColor=#D4A017;align=center;" parent="1" vertex="1">
+          <mxGeometry x="30" y="40" width="24" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_pk_txt" value="Clave Primaria (AUTO_INCREMENT)" style="text;html=1;fontSize=10;align=left;" parent="1" vertex="1">
+          <mxGeometry x="60" y="40" width="180" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_fk_icon" value="FK" style="text;html=1;fontSize=10;fontStyle=1;fontColor=#B85450;align=center;" parent="1" vertex="1">
+          <mxGeometry x="30" y="60" width="24" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_fk_txt" value="Clave For&amp;aacute;nea" style="text;html=1;fontSize=10;align=left;" parent="1" vertex="1">
+          <mxGeometry x="60" y="60" width="180" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_nn_icon" value="NN" style="text;html=1;fontSize=10;fontStyle=1;fontColor=#333;align=center;" parent="1" vertex="1">
+          <mxGeometry x="30" y="80" width="24" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_nn_txt" value="NOT NULL" style="text;html=1;fontSize=10;align=left;" parent="1" vertex="1">
+          <mxGeometry x="60" y="80" width="180" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_uq_icon" value="UQ" style="text;html=1;fontSize=10;fontStyle=1;fontColor=#6C8EBF;align=center;" parent="1" vertex="1">
+          <mxGeometry x="30" y="100" width="24" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_uq_txt" value="UNIQUE" style="text;html=1;fontSize=10;align=left;" parent="1" vertex="1">
+          <mxGeometry x="60" y="100" width="180" height="16" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- TABLA: categorias -->
+        <!-- ========================================== -->
+        <mxCell id="t_cat_header" value="&lt;b&gt;categorias&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="80" y="200" width="280" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t_cat_cols" value="&lt;div style='text-align:left;font-size:12px;line-height:1.7;'&gt;&lt;b style='color:#D4A017;'&gt;PK&lt;/b&gt; idcategoria &lt;span style='color:#888;'&gt;TINYINT AUTO_INCREMENT&lt;/span&gt;&lt;br&gt;&lt;b style='color:#333;'&gt;NN&lt;/b&gt; nombre &lt;span style='color:#888;'&gt;VARCHAR(100)&lt;/span&gt;&lt;br&gt;imagen &lt;span style='color:#888;'&gt;VARCHAR(255)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;overflow=auto;" parent="1" vertex="1">
+          <mxGeometry x="80" y="235" width="280" height="85" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- TABLA: productos -->
+        <!-- ========================================== -->
+        <mxCell id="t_prod_header" value="&lt;b&gt;productos&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="500" y="170" width="310" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t_prod_cols" value="&lt;div style='text-align:left;font-size:12px;line-height:1.7;'&gt;&lt;b style='color:#D4A017;'&gt;PK&lt;/b&gt; idproducto &lt;span style='color:#888;'&gt;SMALLINT AUTO_INCREMENT&lt;/span&gt;&lt;br&gt;&lt;b style='color:#B85450;'&gt;FK&lt;/b&gt; &lt;b style='color:#333;'&gt;NN&lt;/b&gt; idcategoria &lt;span style='color:#888;'&gt;TINYINT&lt;/span&gt;&lt;br&gt;&lt;b style='color:#333;'&gt;NN&lt;/b&gt; nombre &lt;span style='color:#888;'&gt;VARCHAR(150)&lt;/span&gt;&lt;br&gt;descripcion &lt;span style='color:#888;'&gt;TEXT&lt;/span&gt;&lt;br&gt;&lt;b style='color:#333;'&gt;NN&lt;/b&gt; precio &lt;span style='color:#888;'&gt;DOUBLE&lt;/span&gt;&lt;br&gt;marca &lt;span style='color:#888;'&gt;VARCHAR(100)&lt;/span&gt;&lt;br&gt;imagen &lt;span style='color:#888;'&gt;VARCHAR(255)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;overflow=auto;" parent="1" vertex="1">
+          <mxGeometry x="500" y="205" width="310" height="185" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- TABLA: usuarios -->
+        <!-- ========================================== -->
+        <mxCell id="t_usr_header" value="&lt;b&gt;usuarios&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="80" y="470" width="310" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t_usr_cols" value="&lt;div style='text-align:left;font-size:12px;line-height:1.7;'&gt;&lt;b style='color:#D4A017;'&gt;PK&lt;/b&gt; idusuario &lt;span style='color:#888;'&gt;SMALLINT AUTO_INCREMENT&lt;/span&gt;&lt;br&gt;&lt;b style='color:#333;'&gt;NN&lt;/b&gt; &lt;b style='color:#6C8EBF;'&gt;UQ&lt;/b&gt; email &lt;span style='color:#888;'&gt;VARCHAR(150)&lt;/span&gt;&lt;br&gt;&lt;b style='color:#333;'&gt;NN&lt;/b&gt; password &lt;span style='color:#888;'&gt;VARCHAR(255)&lt;/span&gt;&lt;br&gt;&lt;b style='color:#333;'&gt;NN&lt;/b&gt; nombre &lt;span style='color:#888;'&gt;VARCHAR(100)&lt;/span&gt;&lt;br&gt;&lt;b style='color:#333;'&gt;NN&lt;/b&gt; apellidos &lt;span style='color:#888;'&gt;VARCHAR(150)&lt;/span&gt;&lt;br&gt;&lt;b style='color:#333;'&gt;NN&lt;/b&gt; nif &lt;span style='color:#888;'&gt;VARCHAR(15)&lt;/span&gt;&lt;br&gt;telefono &lt;span style='color:#888;'&gt;VARCHAR(20)&lt;/span&gt;&lt;br&gt;direccion &lt;span style='color:#888;'&gt;VARCHAR(255)&lt;/span&gt;&lt;br&gt;codigo_postal &lt;span style='color:#888;'&gt;VARCHAR(10)&lt;/span&gt;&lt;br&gt;localidad &lt;span style='color:#888;'&gt;VARCHAR(100)&lt;/span&gt;&lt;br&gt;provincia &lt;span style='color:#888;'&gt;VARCHAR(100)&lt;/span&gt;&lt;br&gt;ultimo_acceso &lt;span style='color:#888;'&gt;TIMESTAMP NULL&lt;/span&gt;&lt;br&gt;avatar &lt;span style='color:#888;'&gt;VARCHAR(255) DEFAULT 'default.png'&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6B656;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;overflow=auto;" parent="1" vertex="1">
+          <mxGeometry x="80" y="505" width="310" height="345" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- TABLA: pedidos -->
+        <!-- ========================================== -->
+        <mxCell id="t_ped_header" value="&lt;b&gt;pedidos&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="570" y="500" width="310" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t_ped_cols" value="&lt;div style='text-align:left;font-size:12px;line-height:1.7;'&gt;&lt;b style='color:#D4A017;'&gt;PK&lt;/b&gt; idpedido &lt;span style='color:#888;'&gt;SMALLINT AUTO_INCREMENT&lt;/span&gt;&lt;br&gt;&lt;b style='color:#333;'&gt;NN&lt;/b&gt; fecha &lt;span style='color:#888;'&gt;DATE&lt;/span&gt;&lt;br&gt;&lt;b style='color:#333;'&gt;NN&lt;/b&gt; estado &lt;span style='color:#888;'&gt;CHAR(1) DEFAULT 'c'&lt;/span&gt;&lt;br&gt;&lt;b style='color:#B85450;'&gt;FK&lt;/b&gt; &lt;b style='color:#333;'&gt;NN&lt;/b&gt; idusuario &lt;span style='color:#888;'&gt;SMALLINT&lt;/span&gt;&lt;br&gt;importe &lt;span style='color:#888;'&gt;DOUBLE NULL&lt;/span&gt;&lt;br&gt;iva &lt;span style='color:#888;'&gt;DOUBLE NULL&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B85450;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;overflow=auto;" parent="1" vertex="1">
+          <mxGeometry x="570" y="535" width="310" height="165" as="geometry" />
+        </mxCell>
+
+        <!-- Nota estado -->
+        <mxCell id="nota_estado" value="&lt;div style='font-size:10px;'&gt;&lt;b&gt;estado:&lt;/b&gt;&lt;br&gt;'c' = Carrito (en curso)&lt;br&gt;'f' = Finalizado (pagado)&lt;/div&gt;" style="shape=note;strokeColor=#B85450;fillColor=#FFF0EF;size=12;html=1;align=left;spacingLeft=6;whiteSpace=wrap;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="900" y="580" width="170" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="nota_estado_link" style="endArrow=none;dashed=1;strokeColor=#B85450;strokeWidth=1;" parent="1" source="nota_estado" target="t_ped_cols" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- TABLA: lineaspedidos -->
+        <!-- ========================================== -->
+        <mxCell id="t_lp_header" value="&lt;b&gt;lineaspedidos&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="340" width="310" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t_lp_cols" value="&lt;div style='text-align:left;font-size:12px;line-height:1.7;'&gt;&lt;b style='color:#D4A017;'&gt;PK&lt;/b&gt; idlinea &lt;span style='color:#888;'&gt;SMALLINT AUTO_INCREMENT&lt;/span&gt;&lt;br&gt;&lt;b style='color:#B85450;'&gt;FK&lt;/b&gt; &lt;b style='color:#333;'&gt;NN&lt;/b&gt; idpedido &lt;span style='color:#888;'&gt;SMALLINT&lt;/span&gt;&lt;br&gt;&lt;b style='color:#B85450;'&gt;FK&lt;/b&gt; &lt;b style='color:#333;'&gt;NN&lt;/b&gt; idproducto &lt;span style='color:#888;'&gt;SMALLINT&lt;/span&gt;&lt;br&gt;&lt;b style='color:#333;'&gt;NN&lt;/b&gt; cantidad &lt;span style='color:#888;'&gt;INT&lt;/span&gt;&lt;/div&gt;&lt;hr style='margin:4px 0;'&gt;&lt;div style='font-size:10px;color:#6C8EBF;'&gt;&lt;b&gt;UQ&lt;/b&gt; (idpedido, idproducto)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673A6;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;overflow=auto;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="375" width="310" height="145" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- RELACIONES (FK lines) -->
+        <!-- ========================================== -->
+
+        <!-- categorias 1 ====== N productos -->
+        <mxCell id="rel_cat_prod" style="endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;strokeWidth=2;strokeColor=#82B366;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.2;entryDx=0;entryDy=0;" parent="1" source="t_cat_cols" target="t_prod_cols" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_cat_prod_1" value="&lt;b&gt;1&lt;/b&gt;" style="text;html=1;fontSize=13;fontColor=#82B366;align=center;" parent="1" vertex="1">
+          <mxGeometry x="370" y="255" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_cat_prod_n" value="&lt;b&gt;N&lt;/b&gt;" style="text;html=1;fontSize=13;fontColor=#82B366;align=center;" parent="1" vertex="1">
+          <mxGeometry x="490" y="225" width="20" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- usuarios 1 ====== N pedidos -->
+        <mxCell id="rel_usr_ped" style="endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;strokeWidth=2;strokeColor=#D6B656;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;" parent="1" source="t_usr_cols" target="t_ped_cols" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_usr_ped_1" value="&lt;b&gt;1&lt;/b&gt;" style="text;html=1;fontSize=13;fontColor=#D6B656;align=center;" parent="1" vertex="1">
+          <mxGeometry x="400" y="590" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_usr_ped_n" value="&lt;b&gt;N&lt;/b&gt;" style="text;html=1;fontSize=13;fontColor=#D6B656;align=center;" parent="1" vertex="1">
+          <mxGeometry x="555" y="590" width="20" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- pedidos 1 ====== N lineaspedidos -->
+        <mxCell id="rel_ped_lp" style="endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;strokeWidth=2;strokeColor=#B85450;exitX=1;exitY=0.2;exitDx=0;exitDy=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" parent="1" source="t_ped_cols" target="t_lp_cols" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1050" y="568" />
+              <mxPoint x="1050" y="477" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_ped_lp_1" value="&lt;b&gt;1&lt;/b&gt;" style="text;html=1;fontSize=13;fontColor=#B85450;align=center;" parent="1" vertex="1">
+          <mxGeometry x="890" y="548" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_ped_lp_n" value="&lt;b&gt;N&lt;/b&gt;" style="text;html=1;fontSize=13;fontColor=#B85450;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="462" width="20" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- productos 1 ====== N lineaspedidos -->
+        <mxCell id="rel_prod_lp" style="endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;strokeWidth=2;strokeColor=#6C8EBF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" parent="1" source="t_prod_cols" target="t_lp_cols" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1050" y="298" />
+              <mxPoint x="1050" y="419" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_prod_lp_1" value="&lt;b&gt;1&lt;/b&gt;" style="text;html=1;fontSize=13;fontColor=#6C8EBF;align=center;" parent="1" vertex="1">
+          <mxGeometry x="820" y="280" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_prod_lp_n" value="&lt;b&gt;N&lt;/b&gt;" style="text;html=1;fontSize=13;fontColor=#6C8EBF;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="400" width="20" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Nota BD -->
+        <mxCell id="nota_bd" value="&lt;div style='font-size:10px;text-align:left;'&gt;&lt;b&gt;Motor:&lt;/b&gt; MySQL / MariaDB&lt;br&gt;&lt;b&gt;Pool:&lt;/b&gt; JNDI (jdbc/nexabyte)&lt;br&gt;&lt;b&gt;Charset:&lt;/b&gt; UTF-8&lt;/div&gt;" style="shape=note;strokeColor=#666666;fillColor=#f5f5f5;size=12;html=1;align=left;spacingLeft=6;whiteSpace=wrap;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1250" y="560" width="170" height="55" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
