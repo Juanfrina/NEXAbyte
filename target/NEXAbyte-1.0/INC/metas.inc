@@ -11,3 +11,9 @@ METAS.INC - Metadatos comunes para todas las páginas
 <meta name="keywords" content="componentes informáticos, tienda online, procesadores, tarjetas gráficas, memorias RAM, discos duros, SSD, portátiles, sobremesa, hardware">
 <meta name="description" content="NEXAbyte - Tu tienda online de componentes informáticos. Encuentra procesadores, tarjetas gráficas, memorias, almacenamiento y más al mejor precio.">
 <link rel="icon" type="image/jpeg" href="${contexto}/IMG/Logo.jpg">
+<script>
+    // Mantener la URL limpia: siempre muestra solo la raíz del proyecto
+    if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, document.title, '${contexto}/');
+    }
+</script>
