@@ -284,15 +284,15 @@ La base de datos `nexabyte` consta de 5 tablas principales:
                        │ precio            │       │ apellidos    │
                        │ marca             │       │ nif          │
                        │ imagen            │       │ telefono     │
-                       └───────────────────┘       │ direccion    │
-                                                   │ codigoPostal │
-                       ┌──────────────────┐        │ localidad    │
+                       └────────┬──────────┘       │ direccion    │
+                                │ 1:N              │ codigoPostal │
+                       ┌────────┼─────────┐        │ localidad    │
                        │    PEDIDO        │        │ provincia    │
                        ├──────────────────┤        │ ultimoAcceso │
                        │ idPedido         │        │ avatar       │
                        │ fecha            │        └──────┬───────┘
                        │ estado (c/f)     │               │
-                       │ idUsuario (FK) ──┼───────────────┘
+                       │ idUsuario (FK)   │───────────────┘
                        │ importe          │         1:N
                        │ iva              │
                        └───────┬──────────┘
@@ -302,7 +302,7 @@ La base de datos `nexabyte` consta de 5 tablas principales:
                        ├──────────────────┤
                        │ idLinea          │
                        │ idPedido (FK)    │
-                       │ idProducto (FK)  │
+                       │ idProducto (FK)  │──── PRODUCTO (N:1)
                        │ cantidad         │
                        └──────────────────┘
 ```
