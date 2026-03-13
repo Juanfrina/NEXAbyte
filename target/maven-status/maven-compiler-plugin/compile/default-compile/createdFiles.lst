@@ -15,7 +15,9 @@ es\nexabyte\DAO\ILineaPedidoDAO.class
 es\nexabyte\models\PedidoService.class
 es\nexabyte\beans\Pedido$Estado.class
 es\nexabyte\DAO\ProductoDAO.class
+es\nexabyte\models\AvatarService.class
 es\nexabyte\models\Utils.class
+es\nexabyte\models\ProductoService.class
 es\nexabyte\listener\SessionListener.class
 es\nexabyte\models\CarritoService.class
 es\nexabyte\controllers\GestionPedido.class

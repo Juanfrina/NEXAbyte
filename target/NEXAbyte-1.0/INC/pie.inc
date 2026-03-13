@@ -227,13 +227,13 @@ function validarYPrevisualizarAvatar(input) {
 
     /* Validar tipo */
     if (TIPOS_VALIDOS.indexOf(archivo.type) === -1) {
-        alert('Solo se permiten im\u00e1genes JPG o PNG.');
+        mostrarNotificacion('Solo se permiten im\u00e1genes JPG o PNG.', 'error');
         input.value = '';
         return;
     }
     /* Validar tama\u00f1o */
     if (archivo.size > MAX_SIZE) {
-        alert('La imagen no puede superar los 100 KB (tu archivo pesa ' + Math.round(archivo.size / 1024) + ' KB).');
+        mostrarNotificacion('La imagen no puede superar los 100 KB (tu archivo pesa ' + Math.round(archivo.size / 1024) + ' KB).', 'error');
         input.value = '';
         return;
     }
@@ -489,12 +489,12 @@ function validarYPrevisualizarAvatarModal(input) {
     if (!input.files || !input.files[0]) return;
     var archivo = input.files[0];
     if (TIPOS_VALIDOS.indexOf(archivo.type) === -1) {
-        alert('Solo se permiten im\u00e1genes JPG o PNG.');
+        mostrarNotificacion('Solo se permiten im\u00e1genes JPG o PNG.', 'error');
         input.value = '';
         return;
     }
     if (archivo.size > MAX_SIZE) {
-        alert('La imagen no puede superar los 100 KB (tu archivo pesa ' + Math.round(archivo.size / 1024) + ' KB).');
+        mostrarNotificacion('La imagen no puede superar los 100 KB (tu archivo pesa ' + Math.round(archivo.size / 1024) + ' KB).', 'error');
         input.value = '';
         return;
     }
@@ -520,4 +520,57 @@ document.addEventListener('click', function(e) {
     if (e.target.id === 'modalAcceder') cerrarModalAcceder();
     if (e.target.id === 'modalRegistro') cerrarModalRegistro();
 });
+
+/* ==================== SISTEMA DE NOTIFICACIONES ==================== */
+var _notifContenedor = null;
+
+function mostrarNotificacion(mensaje, tipo) {
+    tipo = tipo || 'info';
+    if (!_notifContenedor) {
+        _notifContenedor = document.createElement('div');
+        _notifContenedor.className = 'notificacion-contenedor';
+        document.body.appendChild(_notifContenedor);
+    }
+    var iconos = { error: '\u26A0', warning: '\u26A0', success: '\u2713', info: '\u2139' };
+    var toast = document.createElement('div');
+    toast.className = 'notificacion-toast notificacion-' + tipo;
+    toast.innerHTML = '<span class="notificacion-icono">' + (iconos[tipo] || '\u2139') + '</span>' +
+        '<span class="notificacion-texto">' + mensaje + '</span>' +
+        '<button class="notificacion-cerrar" title="Cerrar">&times;</button>';
+    toast.querySelector('.notificacion-cerrar').addEventListener('click', function() {
+        cerrarNotificacion(toast);
+    });
+    _notifContenedor.appendChild(toast);
+    setTimeout(function() { cerrarNotificacion(toast); }, 4500);
+}
+
+function cerrarNotificacion(toast) {
+    if (!toast || toast.classList.contains('salir')) return;
+    toast.classList.add('salir');
+    setTimeout(function() { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 350);
+}
+
+function mostrarConfirmacion(mensaje, onConfirm) {
+    var overlay = document.createElement('div');
+    overlay.className = 'confirmacion-overlay';
+    overlay.innerHTML =
+        '<div class="confirmacion-modal">' +
+            '<div class="confirmacion-icono">\u26A0</div>' +
+            '<p class="confirmacion-mensaje">' + mensaje + '</p>' +
+            '<div class="confirmacion-acciones">' +
+                '<button class="boton boton-secundario confirmacion-cancelar">Cancelar</button>' +
+                '<button class="boton boton-primario confirmacion-aceptar">Aceptar</button>' +
+            '</div>' +
+        '</div>';
+    var cerrar = function() { if (overlay.parentNode) overlay.parentNode.removeChild(overlay); document.removeEventListener('keydown', onEsc); };
+    overlay.querySelector('.confirmacion-cancelar').addEventListener('click', cerrar);
+    overlay.querySelector('.confirmacion-aceptar').addEventListener('click', function() {
+        cerrar();
+        if (onConfirm) onConfirm();
+    });
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) cerrar(); });
+    var onEsc = function(e) { if (e.key === 'Escape') cerrar(); };
+    document.addEventListener('keydown', onEsc);
+    document.body.appendChild(overlay);
+}
 </script>

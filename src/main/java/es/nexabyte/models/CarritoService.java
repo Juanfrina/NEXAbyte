@@ -8,11 +8,15 @@ import es.nexabyte.beans.LineaPedido;
 import es.nexabyte.beans.Pedido;
 import es.nexabyte.beans.Producto;
 import es.nexabyte.beans.Usuario;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import com.google.gson.JsonObject;
 
 /**
  * Servicio de lógica de negocio para la gestión del carrito.
@@ -338,6 +342,198 @@ public class CarritoService {
 
         pedidoDAO.actualizarImportes(carrito.getIdPedido());
         vaciarCookie(request, response);
+    }
+
+    // ==================== OPERACIONES HTTP (movidas desde controladores) ====================
+
+    /**
+     * Prepara la vista del carrito cargando las líneas del usuario (BD o cookie).
+     * Sincroniza el contador de artículos en la sesión.
+     *
+     * @param request la petición HTTP.
+     * @return la ruta de la vista del carrito.
+     */
+    public String prepararVistaCarrito(HttpServletRequest request) {
+        HttpSession sesion = request.getSession(true);
+        Usuario usuario = (Usuario) sesion.getAttribute("usuario");
+
+        List<LineaPedido> lineasPedido;
+        if (usuario != null) {
+            lineasPedido = obtenerLineasBD(usuario);
+        } else {
+            lineasPedido = obtenerLineasDesdeCookie(request);
+        }
+
+        request.setAttribute("lineasPedido", lineasPedido);
+        sesion.setAttribute("numArticulos", contarArticulos(lineasPedido));
+
+        return "/JSP/vistas/carrito.jsp";
+    }
+
+    /**
+     * Procesa la operación de añadir un producto al carrito.
+     * Soporta peticiones Ajax (JSON) y tradicionales (redirect).
+     *
+     * @param request la petición HTTP con "idProducto".
+     * @param response la respuesta HTTP.
+     * @throws ServletException si falla el forward.
+     * @throws IOException si hay error de E/S.
+     */
+    public void procesarAnadir(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        boolean esAjax = "XMLHttpRequest".equals(request.getHeader("X-Requested-With"));
+        Short idProducto = Utils.parsearIdProducto(request.getParameter("idProducto"));
+
+        if (idProducto == null) {
+            if (esAjax) { response.setStatus(400); return; }
+            response.sendRedirect(request.getContextPath() + "/");
+            return;
+        }
+
+        HttpSession sesion = request.getSession(true);
+        Usuario usuario = (Usuario) sesion.getAttribute("usuario");
+
+        int totalArticulos;
+        if (usuario != null) {
+            anadirBD(usuario, idProducto);
+            totalArticulos = contarArticulosBD(usuario);
+        } else {
+            totalArticulos = anadirCookieYContar(request, response, idProducto);
+        }
+
+        sesion.setAttribute("numArticulos", totalArticulos);
+
+        if (esAjax) {
+            enviarJsonCarrito(response, totalArticulos);
+        } else {
+            response.sendRedirect(request.getContextPath() + "/GestionPedido?op=verCarrito");
+        }
+    }
+
+    /**
+     * Procesa la actualización de cantidad de un producto (+1 o -1).
+     * Soporta peticiones Ajax.
+     *
+     * @param request la petición HTTP con "idProducto".
+     * @param response la respuesta HTTP.
+     * @param delta variación de cantidad (+1 o -1).
+     * @throws IOException si hay error de E/S.
+     */
+    public void procesarActualizarCantidad(HttpServletRequest request, HttpServletResponse response, int delta)
+            throws IOException {
+
+        boolean esAjax = "XMLHttpRequest".equals(request.getHeader("X-Requested-With"));
+
+        Short idProducto = Utils.parsearIdProducto(request.getParameter("idProducto"));
+        if (idProducto == null) {
+            if (esAjax) { response.sendError(400); return; }
+            response.sendRedirect(request.getContextPath() + "/GestionPedido?op=verCarrito");
+            return;
+        }
+
+        HttpSession sesion = request.getSession(true);
+        Usuario usuario = (Usuario) sesion.getAttribute("usuario");
+
+        int totalArticulos;
+        if (usuario != null) {
+            actualizarCantidadBD(usuario, idProducto, delta);
+            totalArticulos = contarArticulosBD(usuario);
+        } else {
+            totalArticulos = actualizarCantidadCookie(request, response, idProducto, delta);
+        }
+
+        sesion.setAttribute("numArticulos", totalArticulos);
+
+        if (esAjax) {
+            enviarJsonCarrito(response, totalArticulos);
+        } else {
+            response.sendRedirect(request.getContextPath() + "/GestionPedido?op=verCarrito");
+        }
+    }
+
+    /**
+     * Procesa la eliminación de un producto del carrito.
+     * Soporta peticiones Ajax.
+     *
+     * @param request la petición HTTP con "idProducto".
+     * @param response la respuesta HTTP.
+     * @throws IOException si hay error de E/S.
+     */
+    public void procesarEliminar(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
+
+        boolean esAjax = "XMLHttpRequest".equals(request.getHeader("X-Requested-With"));
+
+        Short idProducto = Utils.parsearIdProducto(request.getParameter("idProducto"));
+        if (idProducto == null) {
+            if (esAjax) { response.sendError(400); return; }
+            response.sendRedirect(request.getContextPath() + "/GestionPedido?op=verCarrito");
+            return;
+        }
+
+        HttpSession sesion = request.getSession(true);
+        Usuario usuario = (Usuario) sesion.getAttribute("usuario");
+
+        int totalArticulos;
+        if (usuario != null) {
+            eliminarProductoBD(usuario, idProducto);
+            totalArticulos = contarArticulosBD(usuario);
+        } else {
+            totalArticulos = eliminarProductoCookie(request, response, idProducto);
+        }
+        sesion.setAttribute("numArticulos", totalArticulos);
+
+        if (esAjax) {
+            enviarJsonCarrito(response, totalArticulos);
+        } else {
+            response.sendRedirect(request.getContextPath() + "/GestionPedido?op=verCarrito");
+        }
+    }
+
+    /**
+     * Procesa el vaciado completo del carrito.
+     * Soporta peticiones Ajax.
+     *
+     * @param request la petición HTTP.
+     * @param response la respuesta HTTP.
+     * @throws IOException si hay error de E/S.
+     */
+    public void procesarVaciar(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
+
+        boolean esAjax = "XMLHttpRequest".equals(request.getHeader("X-Requested-With"));
+
+        HttpSession sesion = request.getSession(true);
+        Usuario usuario = (Usuario) sesion.getAttribute("usuario");
+
+        if (usuario != null) {
+            vaciarBD(usuario);
+        } else {
+            vaciarCookie(request, response);
+        }
+
+        sesion.setAttribute("numArticulos", 0);
+
+        if (esAjax) {
+            enviarJsonCarrito(response, 0);
+        } else {
+            response.sendRedirect(request.getContextPath() + "/GestionPedido?op=verCarrito");
+        }
+    }
+
+    /**
+     * Envía una respuesta JSON con el total de artículos del carrito.
+     *
+     * @param response la respuesta HTTP.
+     * @param totalArticulos el número total de artículos.
+     * @throws IOException si falla la escritura.
+     */
+    private void enviarJsonCarrito(HttpServletResponse response, int totalArticulos) throws IOException {
+        response.setContentType("application/json;charset=UTF-8");
+        JsonObject json = new JsonObject();
+        json.addProperty("totalArticulos", totalArticulos);
+        response.getWriter().write(json.toString());
     }
 
     // ==================== UTILIDADES INTERNAS ====================

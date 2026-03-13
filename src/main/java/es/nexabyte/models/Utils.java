@@ -1,5 +1,9 @@
 package es.nexabyte.models;
 
+import java.io.IOException;
+import javax.servlet.http.HttpServletResponse;
+import org.json.JSONObject;
+
 /**
  * Clase de utilidades generales para la aplicación.
  * 
@@ -69,5 +73,40 @@ public class Utils {
      */
     public static boolean esVacio(String texto) {
         return texto == null || texto.trim().isEmpty();
+    }
+
+    /**
+     * Parsea un String a Short de forma segura.
+     *
+     * @param idStr el texto a convertir.
+     * @return el Short parseado, o null si el formato es incorrecto.
+     */
+    public static Short parsearIdProducto(String idStr) {
+        if (idStr == null) return null;
+        try {
+            return Short.parseShort(idStr);
+        } catch (NumberFormatException e) {
+            return null;
+        }
+    }
+
+    /**
+     * Envía una respuesta JSON para peticiones Ajax.
+     * Formato: {"resultado": "ok"} o {"resultado": "error", "mensaje": "..."}.
+     *
+     * @param response la respuesta HTTP.
+     * @param resultado "ok" o "error".
+     * @param mensaje el mensaje descriptivo (puede ser null si resultado es "ok").
+     * @throws IOException si falla la escritura.
+     */
+    public static void enviarJsonRespuesta(HttpServletResponse response, String resultado, String mensaje)
+            throws IOException {
+        response.setContentType("application/json;charset=UTF-8");
+        JSONObject json = new JSONObject();
+        json.put("resultado", resultado);
+        if (mensaje != null) {
+            json.put("mensaje", mensaje);
+        }
+        response.getWriter().write(json.toString());
     }
 }

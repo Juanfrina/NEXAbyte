@@ -15,9 +15,11 @@ C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\bea
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\controllers\Ajax.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\DAO\CategoriaDAO.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\DAO\IProductoDAO.java
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\models\ProductoService.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\DAO\IPedidoDAO.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\models\SecurityUtils.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\controllers\FrontController.java
+C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\models\AvatarService.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\models\EnumConverter.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\models\PedidoService.java
 C:\Users\jfco1\Documents\NetBeansProjects\NEXAbyte\src\main\java\es\nexabyte\beans\Usuario.java

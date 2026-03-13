@@ -41,7 +41,13 @@ public class Ajax extends HttpServlet {
 
         switch (operacion) {
             case "letraNif":
-                letraNif(request, response);
+                response.setContentType("application/json;charset=UTF-8");
+                String numeros = request.getParameter("nif");
+                String letra = Utils.calcularLetraNIF(numeros);
+                JSONObject json = new JSONObject();
+                json.put("nif", numeros != null ? numeros : "");
+                json.put("letra", letra);
+                response.getWriter().write(json.toString());
                 break;
             default:
                 response.sendError(400, "Operación no válida.");
@@ -61,28 +67,6 @@ public class Ajax extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doGet(request, response);
-    }
-
-    /**
-     * Calcula la letra del NIF a partir de los 8 dígitos recibidos por Ajax.
-     * Responde en JSON: {"nif": "12345678", "letra": "Z"}
-     * Usa org.json.JSONObject para construir la respuesta.
-     *
-     * @param request la petición con el parámetro "nif".
-     * @param response la respuesta donde se escribe el JSON.
-     * @throws IOException si falla la escritura.
-     */
-    private void letraNif(HttpServletRequest request, HttpServletResponse response)
-            throws IOException {
-
-        response.setContentType("application/json;charset=UTF-8");
-        String numeros = request.getParameter("nif");
-        String letra = Utils.calcularLetraNIF(numeros);
-
-        JSONObject json = new JSONObject();
-        json.put("nif", numeros != null ? numeros : "");
-        json.put("letra", letra);
-        response.getWriter().write(json.toString());
     }
 
     /**

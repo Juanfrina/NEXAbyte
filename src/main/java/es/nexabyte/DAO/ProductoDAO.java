@@ -162,30 +162,42 @@ public class ProductoDAO implements IProductoDAO {
     /**
      * {@inheritDoc}
      * Construye la consulta SQL dinámicamente según los filtros proporcionados.
+     * Busca en nombre y descripción. Soporta múltiples categorías y marcas.
      */
     @Override
-    public List<Producto> buscar(String nombre, Byte idCategoria, String marca,
+    public List<Producto> buscar(String nombre, List<Byte> idsCategorias, List<String> marcas,
                                   Double precioMin, Double precioMax) {
         List<Producto> productos = new ArrayList<>();
         StringBuilder sql = new StringBuilder(SQL_BASE + " WHERE 1=1");
         List<Object> parametros = new ArrayList<>();
 
-        // Filtro por nombre (búsqueda parcial)
+        // Filtro por nombre o descripción (búsqueda parcial)
         if (nombre != null && !nombre.trim().isEmpty()) {
-            sql.append(" AND p.nombre LIKE ?");
+            sql.append(" AND (p.nombre LIKE ? OR p.descripcion LIKE ?)");
+            parametros.add("%" + nombre.trim() + "%");
             parametros.add("%" + nombre.trim() + "%");
         }
 
-        // Filtro por categoría
-        if (idCategoria != null) {
-            sql.append(" AND p.idcategoria = ?");
-            parametros.add(idCategoria);
+        // Filtro por categorías (múltiples con IN)
+        if (idsCategorias != null && !idsCategorias.isEmpty()) {
+            StringBuilder placeholders = new StringBuilder();
+            for (int i = 0; i < idsCategorias.size(); i++) {
+                if (i > 0) placeholders.append(", ");
+                placeholders.append("?");
+                parametros.add(idsCategorias.get(i));
+            }
+            sql.append(" AND p.idcategoria IN (").append(placeholders).append(")");
         }
 
-        // Filtro por marca
-        if (marca != null && !marca.trim().isEmpty()) {
-            sql.append(" AND p.marca = ?");
-            parametros.add(marca.trim());
+        // Filtro por marcas (múltiples con IN)
+        if (marcas != null && !marcas.isEmpty()) {
+            StringBuilder placeholders = new StringBuilder();
+            for (int i = 0; i < marcas.size(); i++) {
+                if (i > 0) placeholders.append(", ");
+                placeholders.append("?");
+                parametros.add(marcas.get(i).trim());
+            }
+            sql.append(" AND p.marca IN (").append(placeholders).append(")");
         }
 
         // Filtro por precio mínimo

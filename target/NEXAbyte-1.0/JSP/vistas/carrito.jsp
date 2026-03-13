@@ -235,24 +235,24 @@
             document.querySelectorAll(".btn-eliminar-carrito").forEach(function (btn) {
                 btn.addEventListener("click", function () {
                     var idProducto = this.getAttribute("data-id");
-                    if (!confirm("¿Eliminar este producto del carrito?")) return;
-
-                    var xhr = new XMLHttpRequest();
-                    xhr.open("POST", contexto + "/GestionPedido", true);
-                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-                    xhr.onreadystatechange = function () {
-                        if (xhr.readyState === 4 && xhr.status === 200) {
-                            var data = JSON.parse(xhr.responseText);
-                            var totalArticulos = data.totalArticulos;
-                            var lineaEl = document.getElementById("linea-" + idProducto);
-                            if (lineaEl) lineaEl.remove();
-                            recalcularTotales();
-                            actualizarBadge(totalArticulos);
-                            comprobarCarritoVacio(totalArticulos);
-                        }
-                    };
-                    xhr.send("op=eliminar&idProducto=" + idProducto);
+                    mostrarConfirmacion("\u00bfEliminar este producto del carrito?", function() {
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", contexto + "/GestionPedido", true);
+                        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                        xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+                        xhr.onreadystatechange = function () {
+                            if (xhr.readyState === 4 && xhr.status === 200) {
+                                var data = JSON.parse(xhr.responseText);
+                                var totalArticulos = data.totalArticulos;
+                                var lineaEl = document.getElementById("linea-" + idProducto);
+                                if (lineaEl) lineaEl.remove();
+                                recalcularTotales();
+                                actualizarBadge(totalArticulos);
+                                comprobarCarritoVacio(totalArticulos);
+                            }
+                        };
+                        xhr.send("op=eliminar&idProducto=" + idProducto);
+                    });
                 });
             });
 
@@ -261,20 +261,19 @@
             var btnVaciar = document.getElementById("btn-vaciar-carrito");
             if (btnVaciar) {
                 btnVaciar.addEventListener("click", function () {
-                    if (!confirm("¿Vaciar todo el carrito?")) return;
-
-                    var xhr = new XMLHttpRequest();
-                    xhr.open("POST", contexto + "/GestionPedido", true);
-                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-                    xhr.onreadystatechange = function () {
-                        if (xhr.readyState === 4 && xhr.status === 200) {
-                            actualizarBadge(0);
-                            // Recargar para mostrar el carrito vacío
-                            window.location.href = contexto + "/GestionPedido?op=verCarrito";
-                        }
-                    };
-                    xhr.send("op=vaciar");
+                    mostrarConfirmacion("\u00bfVaciar todo el carrito?", function() {
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", contexto + "/GestionPedido", true);
+                        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                        xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+                        xhr.onreadystatechange = function () {
+                            if (xhr.readyState === 4 && xhr.status === 200) {
+                                actualizarBadge(0);
+                                window.location.href = contexto + "/GestionPedido?op=verCarrito";
+                            }
+                        };
+                        xhr.send("op=vaciar");
+                    });
                 });
             }
 

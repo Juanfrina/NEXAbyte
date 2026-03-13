@@ -52,9 +52,9 @@ La idea es sencilla: un usuario entra en la web, puede navegar por el catálogo 
 ## ✨ Funcionalidades
 
 ### Catálogo de Productos
-- **Página principal** con 6 productos aleatorios destacados (se refrescan en cada visita).
-- **Buscador** por nombre en la cabecera.
-- **Filtros laterales** (_aside_): categoría, marca, rango de precio.
+- **Página principal** con 8 productos aleatorios destacados (se refrescan en cada visita).
+- **Buscador** por nombre y descripción en la cabecera.
+- **Filtros laterales** (_aside_): multi-selección de categorías y marcas (checkboxes), nombre/modelo y rango de precio (slider dual).
 - **Detalle de producto** mediante ventana modal (sin cambiar de página).
 
 ### Gestión de Usuarios
@@ -79,7 +79,10 @@ La idea es sencilla: un usuario entra en la web, puede navegar por el catálogo 
 
 ### Interfaz y UX
 - **Tema oscuro** completo con acentos en cian y azul (inspirado en estéticas _gaming_).
+- **Layout panorámico**: contenedores con ancho máximo de 1800 px para aprovechar monitores grandes.
 - **Diseño responsive**: adaptado a escritorio, tablet y móvil.
+- **Notificaciones emergentes (_toasts_)**: sistema propio de avisos (éxito, error, advertencia, info) que sustituye a los `alert()` nativos del navegador.
+- **Confirmación modal**: diálogo personalizado con botones Aceptar/Cancelar en lugar de `confirm()` nativo.
 - **Accesibilidad**: no se utiliza el color rojo para errores (daltonismo), en su lugar se usa naranja con iconos `⚠`.
 - **Animaciones CSS** suaves: _fadeIn_, _slideUp_ en modales y transiciones en botones/tarjetas.
 - **Páginas de error personalizadas**: 404 y 500 con diseño coherente.
@@ -104,6 +107,7 @@ El proyecto sigue una arquitectura **MVC (Modelo-Vista-Controlador)** limpia con
 ├─────────────────────────────────────────────────────────────────┤
 │                     CAPA DE SERVICIO (models/)                  │
 │   CarritoService · PedidoService · UsuarioService               │
+│   ProductoService · AvatarService                               │
 │   SecurityUtils · Utils · EnumConverter                         │
 ├─────────────────────────────────────────────────────────────────┤
 │                       DAOFactory (Fábrica)                      │
@@ -132,7 +136,7 @@ El proyecto sigue una arquitectura **MVC (Modelo-Vista-Controlador)** limpia con
 | **Front Controller** | `FrontController.java` | Punto de entrada único para la navegación del catálogo |
 | **DAO** | Paquete `DAO/` con interfaces + implementaciones | Aislar el acceso a la base de datos del resto de la lógica |
 | **Abstract Factory** | `DAOFactory.java` | Crear instancias de DAO sin acoplar el código al tipo concreto |
-| **Service Layer** | `CarritoService`, `PedidoService`, `UsuarioService` | Centralizar la lógica de negocio compleja fuera de los Servlets |
+| **Service Layer** | `CarritoService`, `PedidoService`, `UsuarioService`, `ProductoService`, `AvatarService` | Centralizar la lógica de negocio compleja fuera de los Servlets |
 | **Singleton (implícito)** | `ConnectionFactory` con bloque `static` | Pool de conexiones único vía JNDI/DataSource |
 | **Filter** | `AUTF8.java` | Garantizar codificación UTF-8 en todas las peticiones |
 | **Listener** | `SessionListener.java` | Cargar categorías en `ServletContext` al arrancar la aplicación |
@@ -156,7 +160,7 @@ El proyecto sigue una arquitectura **MVC (Modelo-Vista-Controlador)** limpia con
 ### Frontend
 | Tecnología | Uso |
 |------------|-----|
-| HTML5 + CSS3 | Estructura semántica y estilos (tema oscuro ~1900 líneas) |
+| HTML5 + CSS3 | Estructura semántica y estilos (tema oscuro ~2400 líneas) |
 | JavaScript (ES5) | Validaciones en cliente, AJAX (XHR), modales, interactividad |
 | CSS Variables | Sistema de diseño consistente con variables personalizadas |
 | CSS Animations | Transiciones y animaciones para modales y componentes |
@@ -219,8 +223,10 @@ NEXAbyte/
     │   │   └── SessionListener.java #   Carga categorías al iniciar la app
     │   │
     │   └── models/                  # Capa de servicio y utilidades
+    │       ├── AvatarService.java   #   Procesamiento de avatares (subida/predefinidos)
     │       ├── CarritoService.java  #   Lógica del carrito (BD + cookies)
     │       ├── PedidoService.java   #   Lógica de pedidos
+    │       ├── ProductoService.java #   Lógica de productos y búsqueda
     │       ├── UsuarioService.java  #   Lógica de usuarios
     │       ├── SecurityUtils.java   #   Encriptación MD5
     │       ├── EnumConverter.java   #   Converter para BeanUtils (enums)
@@ -462,7 +468,7 @@ CREATE TABLE linea_pedido (
 
 | Vista | Descripción |
 |-------|-------------|
-| **Inicio** | 6 productos aleatorios destacados, filtros laterales, buscador en cabecera |
+| **Inicio** | 6 productos aleatorios destacados, filtros laterales multi-selección, buscador por nombre y descripción |
 | **Detalle de producto** | Modal con imagen, descripción, precio y botón de añadir al carrito |
 | **Registro** | Modal con formulario completo, avatar upload, validación en tiempo real |
 | **Acceder** | Modal con email/contraseña y toggle de visibilidad |

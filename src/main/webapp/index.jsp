@@ -8,6 +8,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <c:set var="contexto" value="${pageContext.request.contextPath}" scope="application"/>
 
 <%-- Si no hay productos cargados (acceso directo), redirigir al FrontController --%>
@@ -37,34 +38,36 @@
                     
                     <h3 class="filtros-titulo">&#9881; Filtros</h3>
 
-                    <%-- Filtro: Categoría --%>
+                    <%-- Filtro: Categoría (multi-selección con checkboxes) --%>
                     <div class="filtro-grupo">
-                        <label for="filtroCategoria">Categoría</label>
-                        <select id="filtroCategoria" name="idCategoria" 
-                                title="Selecciona una categoría de producto">
-                            <option value="">Todas las categorías</option>
+                        <label>Categoría</label>
+                        <div class="filtro-checkbox-lista">
                             <c:forEach var="cat" items="${applicationScope.categorias}">
-                                <option value="${cat.idCategoria}" 
-                                    ${filtroCategoria == cat.idCategoria ? 'selected' : ''}>
+                                <label class="filtro-checkbox-item">
+                                    <input type="checkbox" name="idCategoria" 
+                                           value="${cat.idCategoria}"
+                                           <c:if test="${not empty filtroCategorias}"><c:forEach var="fc" items="${filtroCategorias}"><c:if test="${fc == cat.idCategoria}">checked</c:if></c:forEach></c:if>>
                                     <c:out value="${cat.nombre}"/>
-                                </option>
+                                    <span class="filtro-checkbox-mark"></span>
+                                </label>
                             </c:forEach>
-                        </select>
+                        </div>
                     </div>
 
-                    <%-- Filtro: Marca --%>
+                    <%-- Filtro: Marca (multi-selección con checkboxes) --%>
                     <div class="filtro-grupo">
-                        <label for="filtroMarca">Marca</label>
-                        <select id="filtroMarca" name="marca"
-                                title="Selecciona una marca">
-                            <option value="">Todas las marcas</option>
+                        <label>Marca</label>
+                        <div class="filtro-checkbox-lista">
                             <c:forEach var="m" items="${marcas}">
-                                <option value="${m}" 
-                                    ${filtroMarca == m ? 'selected' : ''}>
+                                <label class="filtro-checkbox-item">
+                                    <input type="checkbox" name="marca" 
+                                           value="${m}"
+                                           <c:if test="${not empty filtroMarcas}"><c:forEach var="fm" items="${filtroMarcas}"><c:if test="${fm == m}">checked</c:if></c:forEach></c:if>>
                                     <c:out value="${m}"/>
-                                </option>
+                                    <span class="filtro-checkbox-mark"></span>
+                                </label>
                             </c:forEach>
-                        </select>
+                        </div>
                     </div>
 
                     <%-- Filtro: Nombre / Modelo --%>
@@ -113,7 +116,7 @@
             <%-- CONTENIDO - GRID DE PRODUCTOS --%>
             <section class="productos-contenido">
                 <div class="productos-info">
-                    <h2><c:choose><c:when test="${empty filtroNombre && empty filtroCategoria && empty filtroMarca && empty filtroPrecioMin && empty filtroPrecioMax}">Productos destacados</c:when><c:otherwise>Resultados</c:otherwise></c:choose></h2>
+                    <h2><c:choose><c:when test="${empty filtroNombre && empty filtroCategorias && empty filtroMarcas && empty filtroPrecioMin && empty filtroPrecioMax}">Productos destacados</c:when><c:otherwise>Resultados</c:otherwise></c:choose></h2>
                     <span>
                         <c:choose>
                             <c:when test="${not empty productos}">

@@ -45,15 +45,16 @@ public interface IProductoDAO {
     /**
      * Busca productos aplicando múltiples filtros simultáneamente.
      * Los parámetros nulos o vacíos se ignoran en la búsqueda.
+     * Busca en nombre y descripción del producto.
      * 
-     * @param nombre texto a buscar en el nombre del producto.
-     * @param idCategoria identificador de la categoría (null para todas).
-     * @param marca marca del producto (null para todas).
+     * @param nombre texto a buscar en el nombre o descripción del producto.
+     * @param idsCategorias lista de identificadores de categoría (null/vacía para todas).
+     * @param marcas lista de marcas (null/vacía para todas).
      * @param precioMin precio mínimo (null para sin límite inferior).
      * @param precioMax precio máximo (null para sin límite superior).
      * @return una lista de productos que cumplen los filtros.
      */
-    List<Producto> buscar(String nombre, Byte idCategoria, String marca,
+    List<Producto> buscar(String nombre, List<Byte> idsCategorias, List<String> marcas,
                           Double precioMin, Double precioMax);
 
     /**
